@@ -1,0 +1,51 @@
+{
+    "id": 0, 
+    "productCategory": "Knives",
+    "productSubCategory": "Chef Knife",
+    "manufacturer": "Kams Krazy Knives",
+    "distributor": "360 knife no scope",
+    "productName": "knigga Knife",
+    "modelVariant": "12 inch Mandingo",
+    "SKU": [
+        {"storeSKU": "69"},
+        {"vendorSKU": "6969"},
+        {"categoricalSKU": "80085"}],
+    "itemSerial": "1234567890H",
+    "itemWeight": "69 KG",
+    "dimensions": "6ft x 9ft x 69ft",
+    "freightClass": "big Knig",
+    "warranty":[
+        {"component1": "knife handle", "duration": 24},
+        {"component2": "", "duration": 0},
+        {"parts": 36},
+        {"labour": 36}
+    ],
+
+    "shortDescription": ["1st description", "2nd description", "3rd description"],
+    "longDescription": ["1st description", "2nd description"],
+    "additionalInfo": ["1st...", "2nd..."],
+
+    "clearance": true,
+    "returnable": false,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": 69.69},
+        {"onlinePrice": 80.85},
+        {"supplierPrice": 69.69},
+        {"autoQuotesPrice": 80.85},
+        {"shippingPrice": 9.11}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.25},
+        {"discountPercentage": 0.69},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.25},
+        {"fixedComission": 9.11}
+    ]
+}

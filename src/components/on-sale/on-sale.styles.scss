@@ -1,0 +1,16 @@
+.on-sale-card{
+    height: 300px;
+    width: 100%;
+}
+
+.on-sale-card-background{
+    height: 100%;
+    border-radius: inherit;
+}
+
+@media screen and (max-width: 1000px) {
+    .on-sale-card{
+        height: 200px;
+
+    }
+}
