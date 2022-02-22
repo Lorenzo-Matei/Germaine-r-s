@@ -2,10 +2,11 @@
     "id": 0, 
     "productCategory": "Knives",
     "productSubCategory": "Chef Knife",
+    "specificProductClass": "12 inch Bread Knife",
     "manufacturer": "Kams Krazy Knives",
     "distributor": "360 knife no scope",
-    "productName": "knigga Knife",
-    "modelVariant": "12 inch Mandingo",
+    "productName": "kigg Knife",
+    "modelVariant": "Red Handle",
     "SKU": [
         {"storeSKU": "69"},
         {"vendorSKU": "6969"},
@@ -13,7 +14,7 @@
     "itemSerial": "1234567890H",
     "itemWeight": "69 KG",
     "dimensions": "6ft x 9ft x 69ft",
-    "freightClass": "big Knig",
+    "freightClass": "big Kig",
     "warranty":[
         {"component1": "knife handle", "duration": 24},
         {"component2": "", "duration": 0},

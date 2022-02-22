@@ -16,3 +16,9 @@ code {
   font-family: 'Comfortaa';
   src: local('Comfortaa'), url(./fonts/Comfortaa/Comfortaa-Medium.ttf) format('truetype');
 }
+
+/* :root{
+  --nav-size: 60px;
+  --speed:500ms;
+} */
+

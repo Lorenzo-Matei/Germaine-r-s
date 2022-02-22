@@ -1,11 +1,6 @@
 .directory-container{
   display: inline-block;
   width: 90%;
-  // height: 100%;
-  // vertical-align: middle;
-  // justify-content: center;
-  // align-items: center;
-  // text-align: center;
 
 }
 
@@ -13,19 +8,16 @@
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  padding: 0px 5% 0px 5%;
-  // vertical-align: middle;
-  // text-align: center;
+  padding: 0px 0% 0px 0%;
+
 }
 
 .title-card.card{
-  // width: 500px;
-  
+
   margin: 0%;
   justify-content: center;
   align-items: center;
-  // vertical-align: middle;
-  // text-align: center;
+
 
 }
 
@@ -47,18 +39,10 @@
   }
 
 .card-title-text{
-  // vertical-align: middle;
-  // text-align: center;
-  // justify-content: center;
-  // margin: 0%;
-  // display: block;
   line-height: 1.5%;
 }
 
-.category-title{
-  // padding: 1%;
 
-}
 
   @media screen and (min-width: 600px) {
     .directory-menu{

@@ -1,0 +1,140 @@
+
+.dropdown{
+    // display: flex;
+    position: absolute;
+    top: 58px;
+    right: 50%;
+    width: 250px;
+    transform: translateX(-91%, 1%);
+    background-color: #ddd;
+    border-radius: 5px;
+    // padding: 0px 1rem;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 9999;
+    // height: 500px;
+    // transition: opacity 1000ms ease-in;
+    // transition: height 450ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    scroll-behavior: auto;
+    transition: height 500ms ease;
+    overflow-y: scroll;
+    max-height: 600px;
+    scrollbar-width: 2px;
+}
+
+.dropdown::-webkit-scrollbar {
+    width: 11px;               /* width of the entire scrollbar */
+    border-radius: 5px;
+
+}
+  
+  .dropdown::-webkit-scrollbar-track {
+    background: #ddd;        /* color of the tracking area */
+    border-radius: 5px;
+    margin-left: 10px;
+
+    }
+  
+  .dropdown::-webkit-scrollbar-thumb {
+    background-color: rgb(105, 101, 101);    /* color of the scroll thumb */
+    border-radius: 50px;       /* roundness of the scroll thumb */
+    border: 4px solid #ddd;  /* creates padding around scroll thumb */
+  }
+
+
+
+.menu{
+    width: 100%;
+}
+
+
+
+.menu-item{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: background(500ms);
+    padding: 0.5rem ;
+    // position: absolute;
+
+}
+
+.menu-item:hover{
+    background-color: #fff;
+}
+
+.menu-item .icon-button {
+    margin-right: 0.7rem;
+  }
+
+.menu-item .icon-button:hover {
+    filter: none;
+}
+
+
+.icon-right{
+    margin-left: auto;
+}
+
+/////////////////////////////////////////////////////
+.menu-primary-enter{
+    position: absolute;
+    transform: translateX(-110%);
+}
+
+.menu-primary-enter-active{
+    transform: translateX(0%);
+    transition: all 500ms ease;
+}
+
+.menu-primary-exit{
+    position: absolute;
+}
+
+.menu-primary-exit-active{
+    transform: translateX(-110%);
+    transition: all 500ms ease;
+}
+
+// /////////////////////////
+
+.menu-secondary-enter{
+    transform: translateX(110%)
+}
+
+.menu-secondary-enter-active{
+    transform: translateX(0%);
+    transition: all 500ms ease;
+}
+
+.menu-secondary-exit{
+
+}
+
+.menu-secondary-exit-active{
+    transform: translateX(110%);
+    transition: all 500ms ease;
+    // height: fit-content;
+}
+
+
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(85, 85, 85);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #ddd;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 4px solid #ddd;  /* creates padding around scroll thumb */
+  }
+
+
+  
+
+
