@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './content-page.styles.scss'
+import './showroom.styles.scss'
 
 
-const ContentPage = () => {
+const ShowRoom = () => {
 
     return(
         <div className='container'>
@@ -17,4 +17,4 @@ const ContentPage = () => {
 
 }
 
-export default ContentPage;
+export default ShowRoom;

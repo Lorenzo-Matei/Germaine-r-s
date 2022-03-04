@@ -43,7 +43,7 @@ function NavDropdownMenu () {
 
     return(
         // <div className="dropdown-container">
-            <div className="dropdown" style={{height: menuHeight + 20}} ref={dropdownRef}>
+            <div className="dropdown" style={{height: menuHeight + 25}} ref={dropdownRef}>
                 <CSSTransition 
                     in={activeMenu === 'main'} 
                     unmountOnExit 

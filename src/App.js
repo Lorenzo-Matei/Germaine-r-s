@@ -14,48 +14,41 @@ import{
 
 
 import HomePage from './pages/homepage/homepage.component';
-import ContentPage from './pages/content/content-page.component';
-import AboutPage from './pages/contact/contact.component';
-import ContactPage from './pages/about/about.component';
+import Showroom from './pages/showroom/showrooom.component';
+import ContactPage from './pages/contact/contact.component';
 import ProductListingsPage from './pages/product-listings/product-listings.component';
+import SignInPage from './pages/sign-in-page/sign-in-page.component';
+
 import NavbarFloating from './components/navbar-floating/navbar-floating.component';
 import Background from '../src/assets/images/backgrounds/kitchen1.jpg';
+
+import SearchPage from './pages/search/search.component';
+import CartPage from './pages/cart/cart-page.component';
 
 const App = () => {
   return (
     <div className='site-container' style={{ 
       backgroundImage: `url(${Background})`, 
       backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed'
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'center'
+      
       }}>
-      <NavbarFloating/>
-      <HomePage/>
-      <ProductListingsPage/>
-      <ProductListingsPage/>
-      <ProductListingsPage/>
-      <ProductListingsPage/>
-      <ProductListingsPage/>
-      <ProductListingsPage/>
-      <ProductListingsPage/>
+
+      <Router>
+        <NavbarFloating/>
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/shop" element={<ProductListingsPage/>}/>
+          <Route path="/showroom" element={<Showroom/>}/>
+          <Route path="/contact-us" element={<ContactPage/>}/>
+          <Route path="/sign-in" element={<SignInPage/>}/>
+          <Route path="/cart" element={<CartPage/>}/>
+          <Route path="/search" element={<SearchPage/>}/>
+        </Routes>
+      </Router>
 
     </div>
-
-
-    // <Router>
-    //   <NavBar/>
-    //     <main>
-    //       <Routes>
-    //         <Route path="/home" component={<HomePage/>} />
-    //         <Route path="/products" element={<ProductListingsPage/>} />
-    //         {/* <Route path="/about" element={<AboutPage/>} /> */}
-    //         <Route path="/contact-us" element={<ContactPage/>} />
-    //         {/* <Route path="/content" element={<ContentPage/>} /> */}
-
-    //         {/* <Redirect to="/Home"/> */}
-    //       </Routes> 
-    //     </main>
-  
-    // </Router>
 
   )
 

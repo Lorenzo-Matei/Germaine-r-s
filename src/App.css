@@ -14,5 +14,6 @@ ul{
 }
 
 .site-container{
-    width: 100%
+    width: 100%;
+    padding-top: 15px;
 }

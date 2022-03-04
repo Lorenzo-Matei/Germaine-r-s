@@ -24,13 +24,12 @@ import {
 import {FaHome, FaShoppingBag, FaVideo, FaPhoneVolume, FaSearch, FaShoppingCart, FaUserAstronaut} from 'react-icons/fa';
 
 import './navbar-floating.styles.scss'
-import SearchBox from "../search-box/search-box.component";
 import ExpandingSearchBox from "../expanding-search-box/expanding-search-box.component";
 import Logo from "../../assets/images/misc/store_logo.png";
-import DropDownMenu from "../NavItemDropdown/nav-item-dropdown.component"
 import NewArrivalItem from "../new-arrivals/new-arrivals-item.component";
 import NavItemDropdown from "../NavItemDropdown/nav-item-dropdown.component";
 import NavDropdownMenu from "../nav-dropdown-menu/nav-dropdown-menu.component";
+import { Link } from "react-router-dom";
 
 export default class NavBarFloating extends React.Component {
     
@@ -70,49 +69,56 @@ export default class NavBarFloating extends React.Component {
   render() {
     return (
         <div className="navbar-div">
-          <img src={Logo} className="m-auto logo-img"/>
+          <div className="logo-img-container">
+            <img src={Logo} className="m-auto logo-img"/>
+          </div>
 
           <Card className='m-auto navbar-card' >
-            <Navbar className="m-auto" type="dark" theme="secondary" expand="md" sticky="top">
+            <Navbar className="m-auto" type="dark" expand="md" sticky="top">
                 
                 
                 <NavbarToggler onClick={this.toggleNavbar} />
 
                 <Collapse open={this.state.collapseOpen} navbar>
                 <Nav navbar>
-
                     <NavItem>
-                      <button type="button" class="btn btn-outline-light btn-pill"><FaHome className="button-icon"/>Home</button>
+                      <Link to="/">
+                        <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaHome className="button-icon"/>Home</button>
+                      </Link>
                     </NavItem>
-
-                    {/* <NavItem>
-                      <button type="button" href="#" class="btn btn-outline-light btn-pill"><FaShoppingBag className="button-icon"/>
-                        Shop Categories
-                      </button>
-                    </NavItem> */}
 
                     <NavItemDropdown>
                       <NavDropdownMenu/>
                     </NavItemDropdown>
 
                     <NavItem>
-                      <button type="button" class="btn btn-outline-light btn-pill"><FaVideo className="button-icon"/>Showroom</button>
+                      <Link to="/showroom">
+                        <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaVideo className="button-icon"/>Showroom</button>
+                      </Link>
                     </NavItem>
 
                     <NavItem>
-                      <button type="button" class="btn btn-outline-light btn-pill"><FaPhoneVolume className="button-icon"/>Contact Us</button>
+                      <Link to="/contact-us">
+                        <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaPhoneVolume className="button-icon"/>Contact Us</button>
+                      </Link>
                     </NavItem>
 
                     <NavItem>
-                      <button type="button" class="btn btn-outline-light btn-pill"><FaUserAstronaut className="button-icon"/>Sign In</button>
+                      <Link to="sign-in">
+                        <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaUserAstronaut className="button-icon"/>Sign In</button>
+                      </Link>
                     </NavItem>
 
                     <NavItem>
-                      <button type="button" class="btn btn-outline-light btn-pill shopping-cart"><FaShoppingCart className="button-icon"/></button>
+                      <Link to="/cart">
+                        <button type="button" class="btn btn-outline-light btn-pill shopping-cart nav-btn"><FaShoppingCart className="button-icon"/></button>
+                      </Link>
                     </NavItem>
 
                     <NavItem className="nav-item">
-                      <ExpandingSearchBox/>
+                      <Link to="/search">
+                        <ExpandingSearchBox/>
+                      </Link>
                     </NavItem>
 
                 </Nav>
