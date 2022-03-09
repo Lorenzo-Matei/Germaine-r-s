@@ -5,7 +5,7 @@
     "specificProductClass": "12 inch Bread Knife",
     "manufacturer": "Kams Krazy Knives",
     "distributor": "360 knife no scope",
-    "productName": "kigg Knife",
+    "productName": "kife Knife",
     "modelVariant": "Red Handle",
     "SKU": [
         {"storeSKU": "69"},
@@ -14,7 +14,7 @@
     "itemSerial": "1234567890H",
     "itemWeight": "69 KG",
     "dimensions": "6ft x 9ft x 69ft",
-    "freightClass": "big Kig",
+    "freightClass": "big Kife",
     "warranty":[
         {"component1": "knife handle", "duration": 24},
         {"component2": "", "duration": 0},
@@ -35,7 +35,7 @@
         {"onlinePrice": 80.85},
         {"supplierPrice": 69.69},
         {"autoQuotesPrice": 80.85},
-        {"shippingPrice": 9.11}
+        {"shippingPrice": 9.10}
     ],
 
     "priceMod":[
@@ -47,6 +47,6 @@
 
     "commission": [
         {"commissionPercentage": 0.25},
-        {"fixedComission": 9.11}
+        {"fixedComission": 9.10}
     ]
 }
