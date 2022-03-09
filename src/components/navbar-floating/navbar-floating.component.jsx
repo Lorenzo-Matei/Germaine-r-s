@@ -86,7 +86,13 @@ export default class NavBarFloating extends React.Component {
                         <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaHome className="button-icon"/>Home</button>
                       </Link>
                     </NavItem>
-
+{/* ////////////////////////////////////////////// */}
+                    <NavItem>
+                      <Link to="/products">
+                        <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaHome className="button-icon"/>Products</button>
+                      </Link>
+                    </NavItem>
+{/* /////////////////////////////////////////////// */}
                     <NavItemDropdown>
                       <NavDropdownMenu/>
                     </NavItemDropdown>

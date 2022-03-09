@@ -24,6 +24,7 @@ import Background from '../src/assets/images/backgrounds/kitchen1.jpg';
 
 import SearchPage from './pages/search/search.component';
 import CartPage from './pages/cart/cart-page.component';
+import ProductSearchPage from './pages/products-search/products-search-page.component';
 
 const App = () => {
   return (
@@ -31,7 +32,7 @@ const App = () => {
       backgroundImage: `url(${Background})`, 
       backgroundRepeat: 'no-repeat',
       backgroundAttachment: 'fixed',
-      backgroundPosition: 'center'
+      backgroundPosition: 'center',
       
       }}>
 
@@ -39,6 +40,7 @@ const App = () => {
         <NavbarFloating/>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
+          <Route path="/products" element={<ProductSearchPage/>}/>
           <Route path="/shop" element={<ProductListingsPage/>}/>
           <Route path="/showroom" element={<Showroom/>}/>
           <Route path="/contact-us" element={<ContactPage/>}/>
