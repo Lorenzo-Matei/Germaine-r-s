@@ -1,9 +1,14 @@
 import React from 'react';
 import { CSSTransition } from "react-transition-group";
 import Collapsible from 'react-collapsible';
-import {Button} from 'shards-react'
+import {Button} from 'shards-react';
 
-import './categories-filter.styles.scss';
+import {Treebeard} from 'react-treebeard';
+
+
+import './collapsible-filter.styles.scss';
+import TreeMenu from '../tree-menu/tree-menu.component.jsx';
+import TreeData from '../../categories-data.json';
 
 // create a button that has a collapsible layer where all the departments are.
 // this will dropdown and show all categories
@@ -12,27 +17,20 @@ import './categories-filter.styles.scss';
 // furthermore, under the category menu, the children of that category will be available to further click.
 // refer to https://community.algolia.com/instantsearch.js/v1/examples/e-commerce/ for example
 
+
 const CategoriesFilter = () => {
 
     return (
-        <div className='categories-filter-container'>
-            <Collapsible trigger={<Button className='categories-collapsible-btn' outline  theme="light">Categories</Button>} className='categories-collapsible'>
-                
-            <p className='paragraph'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odio tempore esse aliquid, laudantium inventore nihil cumque illo quo repellat ipsa pariatur suscipit distinctio facere ipsum explicabo hic sit? Voluptatibus</p>
-            <p className='paragraph'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odio tempore esse aliquid, laudantium inventore nihil cumque illo quo repellat ipsa pariatur suscipit distinctio facere ipsum explicabo hic sit? Voluptatibus</p>
-            <p className='paragraph'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odio tempore esse aliquid, laudantium inventore nihil cumque illo quo repellat ipsa pariatur suscipit distinctio facere ipsum explicabo hic sit? Voluptatibus</p>
-            <p className='paragraph'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odio tempore esse aliquid, laudantium inventore nihil cumque illo quo repellat ipsa pariatur suscipit distinctio facere ipsum explicabo hic sit? Voluptatibus</p>
-            <p className='paragraph'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odio tempore esse aliquid, laudantium inventore nihil cumque illo quo repellat ipsa pariatur suscipit distinctio facere ipsum explicabo hic sit? Voluptatibus</p>
-            <p className='paragraph'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odio tempore esse aliquid, laudantium inventore nihil cumque illo quo repellat ipsa pariatur suscipit distinctio facere ipsum explicabo hic sit? Voluptatibus</p>
-
+        <div className='collapsible-filter-container'>
+            <Collapsible trigger={<Button className='collapsible-filter-btn' outline  theme="light">Categories</Button>} className='categories-collapsible' >
+                <div className="col-lg-14 text-left text-dark">
+                    <TreeMenu data={TreeData}/>
+                </div>
             </Collapsible>
+            
         </div>
-        // <div className='categories-filter-container'>
-        //     <button class="collapsible">Categories</button>
-        //     <div class="content">
-        //         <p></p>
-        //     </div>
-        // </div>
+        
+
     )
 }
 export default CategoriesFilter;

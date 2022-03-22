@@ -26,6 +26,7 @@
     margin: auto;
 
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .search-filter-cardbody::-webkit-scrollbar {
@@ -54,10 +55,27 @@
 
 .hr {
     visibility: visible;
-    margin: 0 auto;
-    margin: 20px;
+    margin: 25px;
     width: 90%;
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+#filter-title{
+  padding-top: 25px;
+  color: #ddd;
+  font-weight: 400;
+}
+
+.react-simple-star-rating{
+  // padding: -15px;
+}
+
+.collapsible{
+  margin: 15px 0px;
+}
+
+.brands-container{
+  padding: 15px 0px 15px 0px;
 }

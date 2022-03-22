@@ -1,0 +1,56 @@
+{
+    "id": 0, 
+    "productCategory": "Knives",
+    "productSubCategory": "Chef Knife",
+    "productMicroCategory": "12 inch Bread Knife",
+
+    "manufacturer": "Winco",
+    "distributor": "Winco",
+
+    "productBrand": "winco", 
+    "productName": "kife Knife 3000",
+    "modelVariant": ["Red Handle", "yellow handle"], 
+
+    "SKU": [
+        {"storeSKU": "69"},
+        {"vendorSKU": "6969"},
+        {"LinkedSKU": "80085"}],
+    "itemSerial": "1234567890H",
+    "itemWeight": "69 KG",
+    "dimensions": "6ft x 9ft x 69ft",
+    "freightClass": "big Kife",
+    "warranty":[
+        {"component1": "knife handle", "duration": 24},
+        {"component2": "", "duration": 0},
+        {"parts": 36},
+        {"labour": 36}
+    ],
+
+    "shortDescription": ["1st description", "2nd description", "3rd description"],
+    "gasAndElectrical": ["BTU: info...", "voltage:... amps:.. phase:..."],
+    "additionalInfo": ["1st...", "2nd..."],
+
+    "clearance": true,
+    "returnable": false,
+
+    "currency": "CAD",
+    "pricing": [
+        {"instorePrice": [69.69, 69.69]},
+        {"onlinePrice": [80.85, 80.85]},
+        {"cost": [69.69, 55.55]},
+        {"autoQuotesPrice": [80.85, 90.10]},
+        {"shippingPrice": [9.10, 10.10]}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.25},
+        {"discountPercentage": 0.69},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.25},
+        {"fixedComission": 9.10}
+    ]
+}
