@@ -26,7 +26,6 @@ const ProductSearchFilters = () => {
                     <CategoriesFilter className='categories-container'/>
                     <BrandsFilter className='brands-container'/>
                     
-
                     <h5 id='filter-title'>Ratings</h5>
                     <RatingsFilter/>
 

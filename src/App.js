@@ -25,6 +25,8 @@ import Background from '../src/assets/images/backgrounds/kitchen1.jpg';
 import SearchPage from './pages/search/search.component';
 import CartPage from './pages/cart/cart-page.component';
 import ProductSearchPage from './pages/products-search/products-search-page.component';
+import Footer from './components/footer/footer.component'
+
 
 const App = () => {
   return (
@@ -48,6 +50,7 @@ const App = () => {
           <Route path="/cart" element={<CartPage/>}/>
           <Route path="/search" element={<SearchPage/>}/>
         </Routes>
+        <Footer/>
       </Router>
 
     </div>

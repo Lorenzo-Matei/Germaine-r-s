@@ -17,11 +17,6 @@ const HomePage = () => (  //functional component because we dont really need to 
         <PromoSection/>
         <Directory/>
 
-        
-        <h1 className="text-center" style={{ paddingTop: "30%" }}>
-                Product Listings
-        </h1>
-
 
     </div>
 
