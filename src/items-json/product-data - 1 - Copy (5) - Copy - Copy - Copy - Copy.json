@@ -1,0 +1,52 @@
+{
+    "id": 0, 
+    "productCategory": "Range",
+    "productSubCategory": "",
+    "specificProductClass": "",
+    "manufacturer": "Vulcan",
+    "distributor": "Hobart",
+    "productName": "Vulcan 60" Endurance 10 Burner Range",
+    "modelVariant": "",
+    "SKU": [
+        {"storeSKU": "60SS10B"},
+        {"vendorSKU": "60SS10B"},
+        {"categoricalSKU": ""}],
+    "itemSerial": "",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty":[
+        {"component1": "", "duration": 0},
+        {"component2": "", "duration": 0},
+        {"parts": 0},
+        {"labour": 0}
+    ],
+
+    "shortDescription": ["Vulcan 60" Endurance 10 Burner Range", "", ""],
+    "longDescription": ["", ""],
+    "additionalInfo": ["", ""],
+
+    "clearance": false,
+    "returnable": true,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": 6750.00},
+        {"onlinePrice": 0.00},
+        {"supplierPrice": 5586.00},
+        {"autoQuotesPrice": 0.00},
+        {"shippingPrice": 0.00}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.00},
+        {"discountPercentage": 0.00},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.00},
+        {"fixedComission": 0.00}
+    ]
+}

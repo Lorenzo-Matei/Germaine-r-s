@@ -1,0 +1,52 @@
+{
+    "id": 0, 
+    "productCategory": "Restaurant Series Gas Thermostatic Griddles",
+    "productSubCategory": "",
+    "specificProductClass": "",
+    "manufacturer": "Vulcan",
+    "distributor": "Hobart",
+    "productName": "48" Thermostatic Griddle",
+    "modelVariant": "",
+    "SKU": [
+        {"storeSKU": "VCRG48"},
+        {"vendorSKU": "VCRG48"},
+        {"categoricalSKU": ""}],
+    "itemSerial": "",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty":[
+        {"component1": "", "duration": 0},
+        {"component2": "", "duration": 0},
+        {"parts": 0},
+        {"labour": 0}
+    ],
+
+    "shortDescription": ["48" Thermostatic Griddle", "", ""],
+    "longDescription": ["", ""],
+    "additionalInfo": ["", ""],
+
+    "clearance": false,
+    "returnable": true,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": 3365.00},
+        {"onlinePrice": 0.00},
+        {"supplierPrice": 2804.00},
+        {"autoQuotesPrice": 0.00},
+        {"shippingPrice": 0.00}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.00},
+        {"discountPercentage": 0.00},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.00},
+        {"fixedComission": 0.00}
+    ]
+}

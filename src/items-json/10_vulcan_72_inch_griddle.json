@@ -1,0 +1,56 @@
+{
+    "id": 10, 
+    "productCategory": "Equipment",
+    "productSubCategory": "Flat Griddles",
+    "productMicroCategory": "",
+
+    "manufacturer": "Vulcan",
+    "distributor": "Hobart",
+
+    "productBrand": "Vulcan",
+    "productName": "Griddle",
+    "modelVariant": "72 inch",
+
+    "SKU": [
+        {"storeSKU": "MSA72"},
+        {"vendorSKU": "MSA72"},
+        {"categoricalSKU": ""}],
+    "itemSerial": "",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty":[
+        {"component1": "", "duration": 0},
+        {"component2": "", "duration": 0},
+        {"parts": 0},
+        {"labour": 0}
+    ],
+
+    "shortDescription": ["72 inch MSA Griddle", "", ""],
+    "gasAndElectrical": ["BTU: info...", "voltage:... amps:.. phase:..."],
+    "additionalInfo": ["", ""],
+
+    "clearance": false,
+    "returnable": true,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": [9545.00]},
+        {"onlinePrice": [0.00]},
+        {"supplierPrice": [7954.00]},
+        {"autoQuotesPrice": [0.00]},
+        {"shippingPrice": [0.00]}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.00},
+        {"discountPercentage": 0.00},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.00},
+        {"fixedComission": 0.00}
+    ]
+}

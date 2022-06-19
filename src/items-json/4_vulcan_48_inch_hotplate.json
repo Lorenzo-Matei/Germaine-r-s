@@ -1,0 +1,56 @@
+{
+    "id": 4, 
+    "productCategory": "Equipment",
+    "productSubCategory": "Hotplates",
+    "productMicroCategory": "",
+
+    "manufacturer": "Vulcan",
+    "distributor": "Hobart",
+    
+    "productBrand": "Vulcan",
+    "productName": "Hotplate",
+    "modelVariant": "48 Inch",
+
+    "SKU": [
+        {"storeSKU": "VHP848"},
+        {"vendorSKU": "VHP848"},
+        {"categoricalSKU": ""}],
+    "itemSerial": "",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty":[
+        {"component1": "", "duration": 0},
+        {"component2": "", "duration": 0},
+        {"parts": 0},
+        {"labour": 0}
+    ],
+
+    "shortDescription": ["48 inch Hotplate", "", ""],
+    "gasAndElectrical": ["BTU: info...", "voltage:... amps:.. phase:..."],
+    "additionalInfo": ["", ""],
+
+    "clearance": false,
+    "returnable": true,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": [3670.00]},
+        {"onlinePrice": [0.00]},
+        {"supplierPrice": [3058.00]},
+        {"autoQuotesPrice": [0.00]},
+        {"shippingPrice": [0.00]}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.00},
+        {"discountPercentage": 0.00},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.00},
+        {"fixedComission": 0.00}
+    ]
+}

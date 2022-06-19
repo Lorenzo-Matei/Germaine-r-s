@@ -34,7 +34,6 @@ const ProductSearchPage = () => {
                 <div className='product-search-card'>
                     <div className='product-search-cardbody'>
 
-
                         <div className="search-filter-container-test" >
                             <Button onClick={() => setShowFilterMenu(!showFilterMenu)} pill theme='primary' className='filter-open-button'>
                                     <BsFilterCircle size='25px'/>
@@ -57,8 +56,6 @@ const ProductSearchPage = () => {
                         </div>
 
 
-
-                            
                         <div className='search-results-container'>
                             {/* <p>test test</p> */}
                             <ProductSearchItem/>
@@ -88,8 +85,6 @@ const ProductSearchPage = () => {
 
                 </div>
 
-                {/* </CardBody>
-            </Card> */}
 
         </div>
     )

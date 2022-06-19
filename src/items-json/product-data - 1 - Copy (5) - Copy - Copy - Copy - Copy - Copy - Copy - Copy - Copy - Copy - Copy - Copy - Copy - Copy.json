@@ -1,0 +1,52 @@
+{
+    "id": 0, 
+    "productCategory": "MSA Griddle",
+    "productSubCategory": "",
+    "specificProductClass": "",
+    "manufacturer": "Vulcan",
+    "distributor": "Hobart",
+    "productName": "Griddle",
+    "modelVariant": "24 inch",
+    "SKU": [
+        {"storeSKU": "MSA24"},
+        {"vendorSKU": "MSA24"},
+        {"categoricalSKU": ""}],
+    "itemSerial": "",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty":[
+        {"component1": "", "duration": 0},
+        {"component2": "", "duration": 0},
+        {"parts": 0},
+        {"labour": 0}
+    ],
+
+    "shortDescription": ["24" Griddle", "", ""],
+    "longDescription": ["", ""],
+    "additionalInfo": ["", ""],
+
+    "clearance": false,
+    "returnable": true,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": 4494.00},
+        {"onlinePrice": 0.00},
+        {"supplierPrice": 3745.00},
+        {"autoQuotesPrice": 0.00},
+        {"shippingPrice": 0.00}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.00},
+        {"discountPercentage": 0.00},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.00},
+        {"fixedComission": 0.00}
+    ]
+}

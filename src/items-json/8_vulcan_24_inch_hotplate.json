@@ -1,0 +1,56 @@
+{
+    "id": 8, 
+    "productCategory": "Equipment",
+    "productSubCategory": "Hotplates",
+    "productMicroCategory": "",
+
+    "manufacturer": "Vulcan",
+    "distributor": "Hobart",
+
+    "productBrand": "Vulcan",
+    "productName": "Hotplate",
+    "modelVariant": "24 inch",
+
+    "SKU": [
+        {"storeSKU": "VHP424"},
+        {"vendorSKU": "VHP424"},
+        {"categoricalSKU": ""}],
+    "itemSerial": "",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty":[
+        {"component1": "", "duration": 0},
+        {"component2": "", "duration": 0},
+        {"parts": 0},
+        {"labour": 0}
+    ],
+
+    "shortDescription": ["24 inch Hotplate", "", ""],
+    "gasAndElectrical": ["BTU: info...", "voltage:... amps:.. phase:..."],
+    "additionalInfo": ["", ""],
+
+    "clearance": false,
+    "returnable": true,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": [2156.00]},
+        {"onlinePrice": [0.00]},
+        {"supplierPrice": [1796.00]},
+        {"autoQuotesPrice": [0.00]},
+        {"shippingPrice": [0.00]}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.00},
+        {"discountPercentage": 0.00},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.00},
+        {"fixedComission": 0.00}
+    ]
+}

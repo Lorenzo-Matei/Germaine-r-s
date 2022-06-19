@@ -1,56 +1,110 @@
 {
-    "id": 0, 
+    "id": 0,
     "productCategory": "Knives",
-    "productSubCategory": "Chef Knife",
-    "productMicroCategory": "12 inch Bread Knife",
-
-    "manufacturer": "Winco",
-    "distributor": "Winco",
-
-    "productBrand": "winco", 
-    "productName": "kife Knife 3000",
-    "modelVariant": ["Red Handle", "yellow handle"], 
-
+    "productSubCategory": "Chef Knives",
+    "productMicroCategory": "",
+    "manufacturer": "Wusthof",
+    "distributor": "Hobart",
+    "productBrand": "Wusthof",
+    "productName": "Classic Chef Knife",
+    "modelVariant": "12 inch",
     "SKU": [
-        {"storeSKU": "69"},
-        {"vendorSKU": "6969"},
-        {"LinkedSKU": "80085"}],
-    "itemSerial": "1234567890H",
-    "itemWeight": "69 KG",
-    "dimensions": "6ft x 9ft x 69ft",
-    "freightClass": "big Kife",
-    "warranty":[
-        {"component1": "knife handle", "duration": 24},
-        {"component2": "", "duration": 0},
-        {"parts": 36},
-        {"labour": 36}
+        {
+            "storeSKU": "6s5dgs5g"
+        },
+        {
+            "vendorSKU": "949vf168"
+        },
+        {
+            "linkedSKU": ""
+        }
     ],
-
-    "shortDescription": ["1st description", "2nd description", "3rd description"],
-    "gasAndElectrical": ["BTU: info...", "voltage:... amps:.. phase:..."],
-    "additionalInfo": ["1st...", "2nd..."],
-
-    "clearance": true,
-    "returnable": false,
-
+    "itemSerial": "s98v1sdf1v6df1",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty": [
+        {
+            "component1": "pump",
+            "duration": 12
+        },
+        {
+            "component2": "",
+            "duration": 0
+        },
+        {
+            "partsAndLabour": 24
+        },
+        {
+            "general": 36
+        }
+    ],
+    "shortDescription": "tester lorem ipsum",
+    "gasType": "Natural Gas",
+    "phase": "1-Phase",
+    "voltage": "240",
+    "BTU": "60",
+    "amps": "300",
+    "additionalInfo": "additional info",
+    "clearance": false,
+    "returnable": true,
     "currency": "CAD",
     "pricing": [
-        {"instorePrice": [69.69, 69.69]},
-        {"onlinePrice": [80.85, 80.85]},
-        {"cost": [69.69, 55.55]},
-        {"autoQuotesPrice": [80.85, 90.10]},
-        {"shippingPrice": [9.10, 10.10]}
+        {
+            "instorePrice": [
+                123.69,
+                0.0
+            ]
+        },
+        {
+            "onlinePrice": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "cost": [
+                12.12,
+                0.0
+            ]
+        },
+        {
+            "autoQuotesPrice": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "shippingPrice": [
+                0.0,
+                0.0
+            ]
+        }
     ],
-
-    "priceMod":[
-        {"marginPercentage": 0.25},
-        {"discountPercentage": 0.69},
-        {"marginDollar": 0.00},
-        {"discountDollar": 0.00}
+    "priceMod": [
+        {
+            "marginPercentage": 0.0
+        },
+        {
+            "discountPercentage": 0.0
+        },
+        {
+            "marginDollar": 0.0
+        },
+        {
+            "discountDollar": 0.0
+        }
     ],
-
     "commission": [
-        {"commissionPercentage": 0.25},
-        {"fixedComission": 9.10}
+        {
+            "commissionPercentage": 0.0
+        },
+        {
+            "fixedCommission": 0.0
+        }
+    ],
+    "images": [
+        "336336.jpg",
+        "4882066.jpg"
     ]
 }

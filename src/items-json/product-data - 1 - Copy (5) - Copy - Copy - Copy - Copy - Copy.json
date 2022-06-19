@@ -1,0 +1,52 @@
+{
+    "id": 0, 
+    "productCategory": "Range",
+    "productSubCategory": "",
+    "specificProductClass": "",
+    "manufacturer": "Vulcan",
+    "distributor": "Hobart",
+    "productName": "Vulcan 60" Endurance Range, 6 Burner 24" Griddle",
+    "modelVariant": "",
+    "SKU": [
+        {"storeSKU": "60SS6B24G"},
+        {"vendorSKU": "60SS6B24G"},
+        {"categoricalSKU": ""}],
+    "itemSerial": "",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty":[
+        {"component1": "", "duration": 0},
+        {"component2": "", "duration": 0},
+        {"parts": 0},
+        {"labour": 0}
+    ],
+
+    "shortDescription": ["Vulcan 60" Endurance Range, 6 Burner 24" Griddle", "", ""],
+    "longDescription": ["", ""],
+    "additionalInfo": ["", ""],
+
+    "clearance": false,
+    "returnable": true,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": 7134.00},
+        {"onlinePrice": 0.00},
+        {"supplierPrice": 5978.00},
+        {"autoQuotesPrice": 0.00},
+        {"shippingPrice": 0.00}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.00},
+        {"discountPercentage": 0.00},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.00},
+        {"fixedComission": 0.00}
+    ]
+}

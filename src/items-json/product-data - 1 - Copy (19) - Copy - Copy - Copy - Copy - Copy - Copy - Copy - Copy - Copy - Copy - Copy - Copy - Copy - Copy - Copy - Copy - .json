@@ -1,0 +1,52 @@
+{
+    "id": 0, 
+    "productCategory": "Energy Star Economy Fryer",
+    "productSubCategory": "",
+    "specificProductClass": "",
+    "manufacturer": "Vulcan",
+    "distributor": "Hobart",
+    "productName": "35lb, 70,000BTU",
+    "modelVariant": "",
+    "SKU": [
+        {"storeSKU": "1VEG35M"},
+        {"vendorSKU": "1VEG35M"},
+        {"categoricalSKU": ""}],
+    "itemSerial": "",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty":[
+        {"component1": "", "duration": 0},
+        {"component2": "", "duration": 0},
+        {"parts": 0},
+        {"labour": 0}
+    ],
+
+    "shortDescription": ["35lb, 70,000BTU", "", ""],
+    "longDescription": ["", ""],
+    "additionalInfo": ["", ""],
+
+    "clearance": false,
+    "returnable": true,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": 1434.00},
+        {"onlinePrice": 0.00},
+        {"supplierPrice": 1195.00},
+        {"autoQuotesPrice": 0.00},
+        {"shippingPrice": 0.00}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.00},
+        {"discountPercentage": 0.00},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.00},
+        {"fixedComission": 0.00}
+    ]
+}

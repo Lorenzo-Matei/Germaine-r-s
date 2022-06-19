@@ -1,0 +1,56 @@
+{
+    "id": 11, 
+    "productCategory": "Equipment",
+    "productSubCategory": "Flat Griddles",
+    "specificProductClass": "",
+
+    "manufacturer": "Vulcan",
+    "distributor": "Hobart",
+
+    "productBrand": "Vulcan",
+    "productName": "Griddle",
+    "modelVariant": "60\"",
+
+    "SKU": [
+        {"storeSKU": "MSA60"},
+        {"vendorSKU": "MSA60"},
+        {"categoricalSKU": ""}],
+    "itemSerial": "",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty":[
+        {"component1": "", "duration": 0},
+        {"component2": "", "duration": 0},
+        {"parts": 0},
+        {"labour": 0}
+    ],
+
+    "shortDescription": ["60 inch MSA Griddle", "", ""],
+    "gasAndElectrical": ["BTU: info...", "voltage:... amps:.. phase:..."],
+    "additionalInfo": ["", ""],
+
+    "clearance": false,
+    "returnable": true,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": [8007.00,0]},
+        {"onlinePrice": [0.00,0]},
+        {"supplierPrice": [6672.00, 0]},
+        {"autoQuotesPrice": [0.00, 0]},
+        {"shippingPrice": [0.00, 0]}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.00},
+        {"discountPercentage": 0.00},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.00},
+        {"fixedComission": 0.00}
+    ]
+}

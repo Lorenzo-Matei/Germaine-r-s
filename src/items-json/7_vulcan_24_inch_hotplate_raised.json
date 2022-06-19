@@ -1,0 +1,56 @@
+{
+    "id": 7, 
+    "productCategory": "Equipment",
+    "productSubCategory": "Hotplates",
+    "productMicroCategory": "",
+
+    "manufacturer": "Vulcan",
+    "distributor": "Hobart",
+
+    "productBrand": "Vulcan",
+    "productName": "Hotplate raised",
+    "modelVariant": "24 Inch",
+    
+    "SKU": [
+        {"storeSKU": "VHP424U"},
+        {"vendorSKU": "VHP424U"},
+        {"categoricalSKU": ""}],
+    "itemSerial": "",
+    "itemWeight": "",
+    "dimensions": "",
+    "freightClass": "",
+    "warranty":[
+        {"component1": "", "duration": 0},
+        {"component2": "", "duration": 0},
+        {"parts": 0},
+        {"labour": 0}
+    ],
+
+    "shortDescription": ["24 inch Hotplate (raised rear burner)", "", ""],
+    "gasAndElectrical": ["BTU: info...", "voltage:... amps:.. phase:..."],
+    "additionalInfo": ["", ""],
+
+    "clearance": false,
+    "returnable": true,
+
+    "currency": "CAD",
+    "pricing": [
+        {"storePrice": [3002.00]},
+        {"onlinePrice": [0.00]},
+        {"supplierPrice": [2501.00]},
+        {"autoQuotesPrice": [0.00]},
+        {"shippingPrice": [0.00]}
+    ],
+
+    "priceMod":[
+        {"marginPercentage": 0.00},
+        {"discountPercentage": 0.00},
+        {"marginDollar": 0.00},
+        {"discountDollar": 0.00}
+    ],
+
+    "commission": [
+        {"commissionPercentage": 0.00},
+        {"fixedComission": 0.00}
+    ]
+}
