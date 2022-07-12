@@ -3,8 +3,11 @@
     "productCategory": "Knives",
     "productSubCategory": "Chef Knives",
     "productMicroCategory": "",
+    "linkedItemName": "",
+
     "manufacturer": "Wusthof",
     "distributor": "Hobart",
+
     "productBrand": "Wusthof",
     "productName": "Classic Chef Knife",
     "modelVariant": "12 inch",
@@ -40,11 +43,14 @@
         }
     ],
     "shortDescription": "tester lorem ipsum",
-    "gasType": "Natural Gas",
-    "phase": "1-Phase",
-    "voltage": "240",
-    "BTU": "60",
-    "amps": "300",
+    "fuelSource": [
+        {"gasType": "Natural Gas"},
+        {"phase": "1-Phase"},
+        {"voltage": "240"},
+        {"BTU": "60"},
+        {"amps": "300"}
+    ],
+
     "additionalInfo": "additional info",
     "clearance": false,
     "returnable": true,
