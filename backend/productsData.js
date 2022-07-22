@@ -40,7 +40,7 @@ const data = {
       slug: "45lb-powerfry3-tr-series-gas-freestanding-commercial-fryer",
       category: "Fryer",
       image:
-        "/assets/images/sample-products/45LB-POWERFRYER-TR-SERIES GAS-FREESTANDING-COMMERCIAL-FRYER.png",
+        "/assets/images/sample-products/45LB-POWERFRYER-TR-SERIES-GAS-FREESTANDING-COMMERCIAL-FRYER.png",
       price: 1100.0,
       countInStock: 6,
       brand: "Vulcan",

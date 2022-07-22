@@ -4,10 +4,11 @@ import { Link } from "react-router-dom"; // adding the Link Tag will ensure that
 import { Rating } from "react-simple-star-rating";
 import { Badge, Button, Card, CardBody } from "shards-react";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+// import Skeleton from "react-loading-skeleton";
 
-import KitchenKnife from "../../assets/images/product-search/kitchen-knife.png";
-import Logo from "../../assets/images/product-search/wusthof.png";
-import Logo2 from "../../assets/images/product-search/wusthof2.png";
+// import KitchenKnife from "../../assets/images/product-search/kitchen-knife.png";
+// import Logo from "../../assets/images/product-search/wusthof.png";
+// import Logo2 from "../../assets/images/product-search/wusthof2.png";
 
 import "./product-search-item.styles.scss";
 
