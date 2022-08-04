@@ -5,6 +5,7 @@ import { Button } from "shards-react";
 import { BsFilterCircle } from "react-icons/bs";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import LoadingPageAnimation from "../../components/loading-page-animation/loading-page-animation.component";
+import { Carousel } from "react-carousel-minimal";
 
 import ProductSearchFilters from "../../components/product-search-filters/product-search-filters.component";
 import ProductSearchItem from "../../components/product-search-item/product-search-item.component";

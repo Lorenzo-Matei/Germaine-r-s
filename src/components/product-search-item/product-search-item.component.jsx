@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; // adding the Link Tag will ensure that the page isnt refreshed and thusly loads quicker
 
 import { Rating } from "react-simple-star-rating";
-import { Badge, Button, Card, CardBody } from "shards-react";
+import { Badge, Button } from "shards-react";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 // import Skeleton from "react-loading-skeleton";
 

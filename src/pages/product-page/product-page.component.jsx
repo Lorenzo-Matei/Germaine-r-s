@@ -1,7 +1,25 @@
 import axios from "axios";
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+// import { Carousel } from "react-carousel-minimal";
+// import { Carousel } from "react-responsive-carousel";
+
+import { Carousel } from "react-carousel-minimal";
+
+import "./product-page.styles.scss";
+import {
+  InputGroup,
+  InputGroupText,
+  InputGroupAddon,
+  FormInput,
+  FormSelect,
+  Button,
+  Badge,
+} from "shards-react";
+import { Rating } from "react-simple-star-rating";
+import { MdOutlineAddShoppingCart } from "react-icons/md";
+import Collapsible from "react-collapsible";
 
 const ACTIONS = {
   FETCH_REQUEST: "FETCH_REQUEST",
@@ -25,6 +43,73 @@ const reducer = (state, action) => {
 };
 
 function ProductPage() {
+  const data = [
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
+      // caption: `<div>
+      //             San Francisco
+      //             <br/>
+      //             Next line
+      //           </div>`,
+    },
+
+    {
+      image:
+        "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
+      caption: "Scotland",
+    },
+    {
+      image:
+        "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
+      caption: "Darjeeling",
+    },
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
+      caption: "San Francisco",
+    },
+    {
+      image:
+        "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
+      caption: "Scotland",
+    },
+    {
+      image:
+        "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
+      caption: "Darjeeling",
+    },
+    {
+      image:
+        "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
+      caption: "San Francisco",
+    },
+    {
+      image:
+        "https://images.ctfassets.net/bth3mlrehms2/6Ypj2Qd3m3jQk6ygmpsNAM/61d2f8cb9f939beed918971b9bc59bcd/Scotland.jpg?w=750&h=422&fl=progressive&q=50&fm=jpg",
+      caption: "Scotland",
+    },
+    {
+      image:
+        "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
+      caption: "Darjeeling",
+    },
+  ];
+
+  const captionStyle = {
+    fontSize: "2em",
+    fontWeight: "bold",
+  };
+  const slideNumberStyle = {
+    fontSize: "20px",
+    fontWeight: "bold",
+  };
+
+  const [quantity, setQuantity] = useState(1);
+  const changeQuantity = (event) => {
+    setQuantity(event.target.quantity);
+  };
+
   const params = useParams(); //this enables you to grab the productsData params or variables
   const { slug } = params; //this gets the slug variable from productData
 
@@ -77,12 +162,217 @@ function ProductPage() {
   ) : error ? (
     <div>{error}</div>
   ) : (
-    <div>
+    <div className="product-page-container">
       <Helmet>
         <title>{productData.name}</title>
       </Helmet>
-      {productData.name}
-      <div>Test Product Lorem ipsum dolor sit amet.</div>
+
+      <div className="product-page-product-display-container">
+        <div className="product-page-carousel-container">
+          <Carousel
+            className="product-page-carousel"
+            data={data}
+            time={200000}
+            width="850px"
+            height="500px"
+            captionStyle={captionStyle}
+            radius="10px"
+            slideNumber={false}
+            slideNumberStyle={slideNumberStyle}
+            captionPosition="bottom"
+            automatic={true}
+            dots={true}
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideBackgroundColor="darkgrey"
+            slideImageFit="cover"
+            thumbnails={true}
+            thumbnailWidth="100px"
+            style={{
+              textAlign: "center",
+              maxWidth: "800px",
+              maxHeight: "500px",
+              margin: "0px",
+            }}
+          />
+        </div>
+
+        <div className="item-info-card" id="purchase-card">
+          <h1 id="product-page-title">{productData.name}</h1>
+          {/* 
+          <h2 id="product-page-product-description">
+            {productData.description}
+          </h2> */}
+
+          <div id="product-page-ratings-container">
+            <Rating
+              id="product-page-rating-star"
+              allowHalfIcon="true"
+              showTooltip="true"
+              readonly="true"
+              emptyColor="#ddd"
+              ratingValue={87}
+              // emptyIcon={{ border: "solid 1px #fff" }}
+              // emptyStyle={{ border: "solid 1px #fff" }}
+            />
+          </div>
+
+          {/* <h3 id="product-page-stock-indicator">In Stock.</h3> */}
+          <Badge outline theme="success" id="product-page-stock-indicator">
+            In Stock
+          </Badge>
+
+          <h5 id="variant-title">Variant</h5>
+          <FormSelect size="sm" id="product-page-formselect">
+            <option value="first">This is the first Variant</option>
+            <option value="second">This is the second Variant.</option>
+            <option value="third">This is the third variant.</option>
+          </FormSelect>
+
+          <div id="product-page-quantity-container">
+            <InputGroup className="mb-2" id="product-page-quantity-inputgroup">
+              <InputGroupAddon className="quantity-input" type="prepend">
+                <InputGroupText className="quantity-input">
+                  Quantity
+                </InputGroupText>
+              </InputGroupAddon>
+              <FormInput
+                type="number"
+                className="quantity-input"
+                value={quantity}
+                onChange={changeQuantity}
+                min="1"
+                max="99"
+              ></FormInput>
+            </InputGroup>
+          </div>
+
+          {/* <Badge outline theme="light" id="product-page-price">
+            $ {productData.price}
+          </Badge> */}
+
+          <h3 id="product-page-price">$ {productData.price}</h3>
+
+          <Button id="product-page-cart-btn" theme="light">
+            <MdOutlineAddShoppingCart
+              className="product-add-cart-icon"
+              style={{ width: "2em" }}
+            />
+            Add To Cart
+          </Button>
+        </div>
+      </div>
+
+      {/* /////////////////////////////////////////////////////////////// */}
+
+      <div className="product-page-technicals-container">
+        <Collapsible
+          className="product-page-collapsible"
+          open="true"
+          trigger={
+            <Button
+              className="product-page-collapsible-section"
+              outline
+              theme="light"
+            >
+              Product Description
+            </Button>
+          }
+        >
+          <div className="product-page-collapsible-info">
+            {productData.description}
+          </div>
+        </Collapsible>
+
+        <Collapsible
+          className="product-page-collapsible"
+          // open="true"
+          trigger={
+            <Button
+              className="product-page-collapsible-section"
+              outline
+              theme="light"
+            >
+              Technical Information
+            </Button>
+          }
+        >
+          <div className="product-page-collapsible-info">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
+            officiis dolorem, fugiat nihil eligendi at? Cupiditate architecto
+            quos ducimus qui est sed dolor reiciendis, dignissimos voluptatibus
+            eum doloribus molestias autem. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Similique officiis dolorem, fugiat
+            nihil eligendi at? Cupiditate architecto quos ducimus qui est sed
+            dolor reiciendis, dignissimos voluptatibus eum doloribus molestias
+            autem. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Similique officiis dolorem, fugiat nihil eligendi at? Cupiditate
+            architecto quos ducimus qui est sed dolor reiciendis, dignissimos
+            voluptatibus eum doloribus molestias autem.
+          </div>
+        </Collapsible>
+        {/* </div> */}
+
+        <Collapsible
+          className="product-page-collapsible"
+          trigger={
+            <Button
+              className="product-page-collapsible-section"
+              outline
+              theme="light"
+            >
+              Warranty
+            </Button>
+          }
+        >
+          <div className="product-page-collapsible-info">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
+            officiis dolorem, fugiat nihil eligendi at? Cupiditate architecto
+            quos ducimus qui est sed dolor reiciendis, dignissimos voluptatibus
+            eum doloribus molestias autem.
+          </div>
+        </Collapsible>
+
+        <Collapsible
+          className="product-page-collapsible"
+          trigger={
+            <Button
+              className="product-page-collapsible-section"
+              outline
+              theme="light"
+            >
+              Fuel Information
+            </Button>
+          }
+        >
+          <div className="product-page-collapsible-info">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
+            officiis dolorem, fugiat nihil eligendi at? Cupiditate architecto
+            quos ducimus qui est sed dolor reiciendis, dignissimos voluptatibus
+            eum doloribus molestias autem.
+          </div>
+        </Collapsible>
+
+        <Collapsible
+          className="product-page-collapsible"
+          trigger={
+            <Button
+              className="product-page-collapsible-section"
+              outline
+              theme="light"
+            >
+              Additional Information
+            </Button>
+          }
+        >
+          <div className="product-page-collapsible-info">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
+            officiis dolorem, fugiat nihil eligendi at? Cupiditate architecto
+            quos ducimus qui est sed dolor reiciendis, dignissimos voluptatibus
+            eum doloribus molestias autem.
+          </div>
+        </Collapsible>
+      </div>
     </div>
   );
 }
