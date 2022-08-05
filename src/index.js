@@ -7,12 +7,17 @@ import $ from "jquery";
 import Popper from "popper.js";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { HelmetProvider } from "react-helmet-async";
+import { StoreProvider } from "./Store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <HelmetProvider>
-      <App />
-    </HelmetProvider>
+    <StoreProvider>
+      {" "}
+      {/** this take enables you to add items to the cart without losing data when navigating. function is is Store.jsx */}
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    </StoreProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

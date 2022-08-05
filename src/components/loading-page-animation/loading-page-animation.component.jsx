@@ -1,13 +1,19 @@
+import { Spinner } from "reactstrap";
 import "./loading-page-animation.styles.scss";
 
-const loadingPageAnimation = () => {
+const LoadingPageAnimation = () => {
   return (
-    <div class="loading">
-      <div class="arc"></div>
-      <div class="arc"></div>
-      <div class="arc"></div>
-    </div>
+    <Spinner
+      className="loading-spinner"
+      animation="border"
+      size="100px"
+      variant="info"
+      role="status"
+    >
+      <span className="visually-hidden">Loading...</span>{" "}
+      {/* a loading text will be shown if spinner doesnt work */}
+    </Spinner>
   );
 };
 
-export default loadingPageAnimation;
+export default LoadingPageAnimation;

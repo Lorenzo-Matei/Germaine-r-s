@@ -14,6 +14,7 @@ import ProductSearchItem from "../../components/product-search-item/product-sear
 import "./products-search-page.styles.scss";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
+import ErrorMessageBox from "../../components/error-message-box/error-message-box.component";
 
 const ACTIONS = {
   FETCH_REQUEST: "FETCH_REQUEST",
@@ -123,9 +124,9 @@ const ProductSearchPage = () => {
 
           <div className="search-results-container">
             {loading ? (
-              <div>Please Wait. Loading...</div> //<div>page is loading... </div> //
+              <LoadingPageAnimation />
             ) : error ? (
-              <div> {error} </div> // if there is an 'error' then show the message
+              <ErrorMessageBox variant="danger">{error}</ErrorMessageBox> // if there is an 'error' then show the message
             ) : (
               // otherwise show products
               productsData.map((product) => (

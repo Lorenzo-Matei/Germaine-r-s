@@ -1,139 +1,297 @@
-import React, {useState} from "react"; // useState is a Hook
+import React, { useContext, useState } from "react"; // useState is a Hook
 
 import {
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  FormInput,
   Collapse,
   Card,
-  CardBody,
-  CardImg
+  Badge,
 } from "shards-react";
 
-import {FaHome, FaShoppingBag, FaVideo, FaPhoneVolume, FaSearch, FaShoppingCart, FaUserAstronaut} from 'react-icons/fa';
+import {
+  FaHome,
+  FaShoppingBag,
+  FaVideo,
+  FaPhoneVolume,
+  FaSearch,
+  FaShoppingCart,
+  FaUserAstronaut,
+} from "react-icons/fa";
 
-import './navbar-floating.styles.scss'
+import "./navbar-floating.styles.scss";
 import ExpandingSearchBox from "../expanding-search-box/expanding-search-box.component";
 import Logo from "../../assets/images/misc/store_logo.png";
 import NewArrivalItem from "../new-arrivals/new-arrivals-item.component";
 import NavItemDropdown from "../NavItemDropdown/nav-item-dropdown.component";
 import NavDropdownMenu from "../nav-dropdown-menu/nav-dropdown-menu.component";
 import { Link } from "react-router-dom";
+import { Store } from "../../Store";
 
-export default class NavBarFloating extends React.Component {
-    
+const NavBarFloating = () => {
+  const { state } = useContext(Store); //copied from product-page and removed dispatch as changes wont occur here
+  const { cart } = state;
 
-  constructor(props) {
-    super(props);
-    // fontawesome.library.add(faSearch, FontAwesomeIcon);
+  // const toggleDropdown = toggleDropdown.bind();
+  // const toggleNavbar = toggleNavbar.bind();
 
+  const [dropdownOpen, setDropDownOpen] = useState(false);
+  const [collapseOpen, setCollapseOpen] = useState(false);
 
-    this.toggleDropdown = this.toggleDropdown.bind(this);
-    this.toggleNavbar = this.toggleNavbar.bind(this);
-
-    this.state = {
-      dropdownOpen: false,
-      collapseOpen: false
-    };
+  function toggleDropDown() {
+    setDropDownOpen(!dropdownOpen);
   }
 
-  toggleDropdown() {
-    this.setState({
-      ...this.state,
-      ...{
-        dropdownOpen: !this.state.dropdownOpen
-      }
-    });
+  function toggleNavbar() {
+    setCollapseOpen(!collapseOpen);
   }
 
-  toggleNavbar() {
-    this.setState({
-      ...this.state,
-      ...{
-        collapseOpen: !this.state.collapseOpen
-      }
-    });
-  }
+  return (
+    <div className="navbar-div">
+      <div className="logo-img-container">
+        <img src={Logo} className="m-auto logo-img" />
+      </div>
 
-  render() {
-    return (
-        <div className="navbar-div">
-          <div className="logo-img-container">
-            <img src={Logo} className="m-auto logo-img"/>
-          </div>
+      <Card className="m-auto navbar-card">
+        <Navbar className="m-auto" type="dark" expand="md" sticky="top">
+          <NavbarToggler onClick={toggleNavbar} />
 
-          <Card className='m-auto navbar-card' >
-            <Navbar className="m-auto" type="dark" expand="md" sticky="top">
-                
-                
-                <NavbarToggler onClick={this.toggleNavbar} />
+          <Collapse open={collapseOpen} navbar>
+            <Nav navbar>
+              <NavItem>
+                <Link to="/">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-pill nav-btn"
+                  >
+                    <FaHome className="button-icon" />
+                    Home
+                  </button>
+                </Link>
+              </NavItem>
+              {/* ////////////////////////////////////////////// */}
+              <NavItem>
+                <Link to="/products">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-pill nav-btn"
+                  >
+                    <FaHome className="button-icon" />
+                    Products
+                  </button>
+                </Link>
+              </NavItem>
+              {/* /////////////////////////////////////////////// */}
+              <NavItemDropdown>
+                <NavDropdownMenu />
+              </NavItemDropdown>
 
-                <Collapse open={this.state.collapseOpen} navbar>
-                <Nav navbar>
-                    <NavItem>
-                      <Link to="/">
-                        <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaHome className="button-icon"/>Home</button>
-                      </Link>
-                    </NavItem>
-{/* ////////////////////////////////////////////// */}
-                    <NavItem>
-                      <Link to="/products">
-                        <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaHome className="button-icon"/>Products</button>
-                      </Link>
-                    </NavItem>
-{/* /////////////////////////////////////////////// */}
-                    <NavItemDropdown>
-                      <NavDropdownMenu/>
-                    </NavItemDropdown>
+              <NavItem>
+                <Link to="/showroom">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-pill nav-btn"
+                  >
+                    <FaVideo className="button-icon" />
+                    Showroom
+                  </button>
+                </Link>
+              </NavItem>
 
-                    <NavItem>
-                      <Link to="/showroom">
-                        <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaVideo className="button-icon"/>Showroom</button>
-                      </Link>
-                    </NavItem>
+              <NavItem>
+                <Link to="/contact-us">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-pill nav-btn"
+                  >
+                    <FaPhoneVolume className="button-icon" />
+                    Contact Us
+                  </button>
+                </Link>
+              </NavItem>
 
-                    <NavItem>
-                      <Link to="/contact-us">
-                        <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaPhoneVolume className="button-icon"/>Contact Us</button>
-                      </Link>
-                    </NavItem>
+              <NavItem>
+                <Link to="sign-in">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-pill nav-btn"
+                  >
+                    <FaUserAstronaut className="button-icon" />
+                    Sign In
+                  </button>
+                </Link>
+              </NavItem>
 
-                    <NavItem>
-                      <Link to="sign-in">
-                        <button type="button" class="btn btn-outline-light btn-pill nav-btn"><FaUserAstronaut className="button-icon"/>Sign In</button>
-                      </Link>
-                    </NavItem>
+              <NavItem>
+                <Link to="/cart">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light btn-pill shopping-cart nav-btn"
+                  >
+                    <FaShoppingCart className="button-icon" />
+                    {cart.cartItems.length > 0 && ( //if carts items in context exists and is great than 0 items
+                      <Badge id="badge-cart-num" outline theme="danger">
+                        {cart.cartItems.length}
+                        {/** show a badge with the number of items */}
+                      </Badge>
+                    )}
+                  </button>
+                </Link>
+              </NavItem>
 
-                    <NavItem>
-                      <Link to="/cart">
-                        <button type="button" class="btn btn-outline-light btn-pill shopping-cart nav-btn"><FaShoppingCart className="button-icon"/></button>
-                      </Link>
-                    </NavItem>
+              <NavItem className="nav-item">
+                <Link to="/search">
+                  <ExpandingSearchBox />
+                </Link>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </Card>
+    </div>
+  );
+};
+export default NavBarFloating;
 
-                    <NavItem className="nav-item">
-                      <Link to="/search">
-                        <ExpandingSearchBox/>
-                      </Link>
-                    </NavItem>
+// export default class NavBarFloating extends React.Component {
+//   // const { state } = useContext(Store);
+//   // const { cart } = state;
 
-                </Nav>
+//   constructor(props) {
+//     super(props);
+//     // fontawesome.library.add(faSearch, FontAwesomeIcon);
 
-                </Collapse>
-            </Navbar>
-          </Card>
-        </div>
-    );
-  }
-}
+//     this.toggleDropdown = this.toggleDropdown.bind(this);
+//     this.toggleNavbar = this.toggleNavbar.bind(this);
 
+//     this.state = {
+//       dropdownOpen: false,
+//       collapseOpen: false,
+//     };
+//   }
+
+//   toggleDropdown() {
+//     this.setState({
+//       ...this.state,
+//       ...{
+//         dropdownOpen: !this.state.dropdownOpen,
+//       },
+//     });
+//   }
+
+//   toggleNavbar() {
+//     this.setState({
+//       ...this.state,
+//       ...{
+//         collapseOpen: !this.state.collapseOpen,
+//       },
+//     });
+//   }
+
+//   render() {
+//     return (
+//       <div className="navbar-div">
+//         <div className="logo-img-container">
+//           <img src={Logo} className="m-auto logo-img" />
+//         </div>
+
+//         <Card className="m-auto navbar-card">
+//           <Navbar className="m-auto" type="dark" expand="md" sticky="top">
+//             <NavbarToggler onClick={this.toggleNavbar} />
+
+//             <Collapse open={this.state.collapseOpen} navbar>
+//               <Nav navbar>
+//                 <NavItem>
+//                   <Link to="/">
+//                     <button
+//                       type="button"
+//                       class="btn btn-outline-light btn-pill nav-btn"
+//                     >
+//                       <FaHome className="button-icon" />
+//                       Home
+//                     </button>
+//                   </Link>
+//                 </NavItem>
+//                 {/* ////////////////////////////////////////////// */}
+//                 <NavItem>
+//                   <Link to="/products">
+//                     <button
+//                       type="button"
+//                       class="btn btn-outline-light btn-pill nav-btn"
+//                     >
+//                       <FaHome className="button-icon" />
+//                       Products
+//                     </button>
+//                   </Link>
+//                 </NavItem>
+//                 {/* /////////////////////////////////////////////// */}
+//                 <NavItemDropdown>
+//                   <NavDropdownMenu />
+//                 </NavItemDropdown>
+
+//                 <NavItem>
+//                   <Link to="/showroom">
+//                     <button
+//                       type="button"
+//                       class="btn btn-outline-light btn-pill nav-btn"
+//                     >
+//                       <FaVideo className="button-icon" />
+//                       Showroom
+//                     </button>
+//                   </Link>
+//                 </NavItem>
+
+//                 <NavItem>
+//                   <Link to="/contact-us">
+//                     <button
+//                       type="button"
+//                       class="btn btn-outline-light btn-pill nav-btn"
+//                     >
+//                       <FaPhoneVolume className="button-icon" />
+//                       Contact Us
+//                     </button>
+//                   </Link>
+//                 </NavItem>
+
+//                 <NavItem>
+//                   <Link to="sign-in">
+//                     <button
+//                       type="button"
+//                       class="btn btn-outline-light btn-pill nav-btn"
+//                     >
+//                       <FaUserAstronaut className="button-icon" />
+//                       Sign In
+//                     </button>
+//                   </Link>
+//                 </NavItem>
+
+//                 <NavItem>
+//                   <Link to="/cart">
+//                     <button
+//                       type="button"
+//                       class="btn btn-outline-light btn-pill shopping-cart nav-btn"
+//                     >
+//                       <FaShoppingCart className="button-icon" />
+//                       {cart.cartItems.length > 0 && (
+//                         <Badge pill theme="danger">
+//                           {cart.cartItems.length}
+//                         </Badge>
+//                       )}
+//                     </button>
+//                   </Link>
+//                 </NavItem>
+
+//                 <NavItem className="nav-item">
+//                   <Link to="/search">
+//                     <ExpandingSearchBox />
+//                   </Link>
+//                 </NavItem>
+//               </Nav>
+//             </Collapse>
+//           </Navbar>
+//         </Card>
+//       </div>
+//     );
+//   }
+// }

@@ -13,6 +13,13 @@ import { MdOutlineAddShoppingCart } from "react-icons/md";
 import "./product-search-item.styles.scss";
 
 const ProductSearchItem = (props) => {
+  // const { state, dispatch: ctxDispatch } = useContext(Store); //dispatch: is renamed to ctxdispatch to distinguish it from the dispatch in the reducer
+  // const addToCartHandler = () => {
+  //   ctxDispatch({
+  //     type: "CART_ADD_ITEM",
+  //     payload: { ...productData, quantity: 1 }, //this is the item and 1 amount is added to cart
+  //   });
+  // };
   // function ProductSearchItem(props) {
   return (
     <div className="search-item-card">
@@ -53,19 +60,6 @@ const ProductSearchItem = (props) => {
             />
           </Link>
 
-          {/* <p className="p-size-text">Size</p>
-          <div className="product-size-variants-container">
-            <Badge className="product-card-size-badge" theme="light">
-              12"
-            </Badge>
-            <Badge className="product-card-size-badge" theme="light">
-              16"
-            </Badge>
-            <Badge className="product-card-size-badge" theme="light">
-              20"
-            </Badge>
-          </div> */}
-
           <div className="cart-price-container">
             <Badge
               className="product-listing-price-badge"
@@ -75,6 +69,7 @@ const ProductSearchItem = (props) => {
               {"$ " + props.price}
             </Badge>
 
+            {/* onClick={addToCartHandler}      -- add this to Button */}
             <Button className="product-listing-cart-button" pill theme="light">
               <MdOutlineAddShoppingCart className="product-add-cart-icon" />
             </Button>

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useReducer, useState } from "react";
+import { useContext, useEffect, useReducer, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 // import { Carousel } from "react-carousel-minimal";
@@ -16,10 +16,15 @@ import {
   FormSelect,
   Button,
   Badge,
+  Alert,
 } from "shards-react";
 import { Rating } from "react-simple-star-rating";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import Collapsible from "react-collapsible";
+import LoadingPageAnimation from "../../components/loading-page-animation/loading-page-animation.component";
+import ErrorMessageBox from "../../components/error-message-box/error-message-box.component";
+import { getError } from "../../util";
+import { Store } from "../../Store";
 
 const ACTIONS = {
   FETCH_REQUEST: "FETCH_REQUEST",
@@ -144,7 +149,7 @@ function ProductPage() {
       } catch (err) {
         dispatch({
           type: ACTIONS.FETCH_FAIL,
-          payload: err.message,
+          payload: getError(err),
         });
       }
     };
@@ -155,12 +160,23 @@ function ProductPage() {
   }, [slug]); // 2nd parameter - after the , - specifies when to rerender/update it, in this case its when the user selects another product which changes the slug
   // therefore useEffect will run this function after the 1st render of this component
 
+  const { state, dispatch: ctxDispatch } = useContext(Store); //dispatch: is renamed to ctxdispatch to distinguish it from the dispatch in the reducer
+  const addToCartHandler = () => {
+    ctxDispatch({
+      type: "CART_ADD_ITEM",
+      payload: { ...productData, quantity: 1 }, //this is the item and 1 amount is added to cart
+    });
+  };
+
   ////////////////////////////////////   copied from products-page-component  //////////////////////////
 
   return loading ? (
-    <div>Please Wait, Loading...</div>
+    // <div>Please Wait, Loading...</div>
+    <div style={{ margin: "auto", width: "0%" }}>
+      <LoadingPageAnimation />
+    </div>
   ) : error ? (
-    <div>{error}</div>
+    <ErrorMessageBox variant="danger">{error}</ErrorMessageBox>
   ) : (
     <div className="product-page-container">
       <Helmet>
@@ -253,7 +269,11 @@ function ProductPage() {
 
           <h3 id="product-page-price">$ {productData.price}</h3>
 
-          <Button id="product-page-cart-btn" theme="light">
+          <Button
+            id="product-page-cart-btn"
+            theme="light"
+            onClick={addToCartHandler}
+          >
             <MdOutlineAddShoppingCart
               className="product-add-cart-icon"
               style={{ width: "2em" }}
