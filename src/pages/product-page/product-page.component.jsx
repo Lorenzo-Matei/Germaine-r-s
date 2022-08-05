@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect, useReducer, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 // import { Carousel } from "react-carousel-minimal";
 // import { Carousel } from "react-responsive-carousel";
@@ -115,6 +115,7 @@ function ProductPage() {
     setQuantity(event.target.quantity);
   };
 
+  const navigate = useNavigate();
   const params = useParams(); //this enables you to grab the productsData params or variables
   const { slug } = params; //this gets the slug variable from productData
 
@@ -177,6 +178,8 @@ function ProductPage() {
       type: "CART_ADD_ITEM",
       payload: { ...productData, quantity }, //this is the item and 1 amount is added to cart
     });
+
+    navigate("/cart");
   };
 
   ////////////////////////////////////   copied from products-page-component  //////////////////////////
