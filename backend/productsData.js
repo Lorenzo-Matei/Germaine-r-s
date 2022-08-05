@@ -4,6 +4,7 @@ const data = {
   products: [
     // this is an array of 6 products
     {
+      _id: "1", //makes each product unique
       name: "Wustof Amici Chefs Knife 8-inch",
       slug: "wustof-amici-chefs-knife-8-inch",
       category: "Knives",
@@ -20,6 +21,7 @@ const data = {
     },
 
     {
+      _id: "2",
       name: "Wustof Performer Chefs Knife 6-inch",
       slug: "wustof-performer-chefs-knife-6-inch",
       category: "Knives",
@@ -36,6 +38,7 @@ const data = {
     },
 
     {
+      _id: "3",
       name: "45LB POWERFRY3™ TR SERIES GAS FREESTANDING COMMERCIAL FRYER",
       slug: "45lb-powerfry3-tr-series-gas-freestanding-commercial-fryer",
       category: "Fryer",
@@ -52,6 +55,7 @@ const data = {
     },
 
     {
+      _id: "4",
       name: "40LB CEF SERIES ELECTRIC COUNTER FRYER",
       slug: "vulcan-40lb-cef-series-electric-counter-fryer",
       category: "Fryer",
@@ -68,6 +72,7 @@ const data = {
     },
 
     {
+      _id: "5",
       name: "BX-14 Heavy Duty Combi",
       slug: "blodget-bx-14-heavy-duty-combi",
       category: "Ovens",
@@ -83,6 +88,7 @@ const data = {
     },
 
     {
+      _id: "6",
       name: "Centerline™ 20-Quart Mixer",
       slug: "hobart-centerline-20-quart-mixer",
       category: "Mixers",

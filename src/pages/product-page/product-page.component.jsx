@@ -161,7 +161,18 @@ function ProductPage() {
   // therefore useEffect will run this function after the 1st render of this component
 
   const { state, dispatch: ctxDispatch } = useContext(Store); //dispatch: is renamed to ctxdispatch to distinguish it from the dispatch in the reducer
-  const addToCartHandler = () => {
+  const { cart } = state;
+
+  const addToCartHandler = async () => {
+    const itemExists = cart.cartItems.find((x) => x._id === productData._id); //checks if current product exists in the cart
+    const quantity = itemExists ? itemExists.quantity + 1 : 1; // '?' if itemExists then increase quantity +1 ':' otherwise make quantity 1
+    const { data } = await axios.get(`/api/productsData/${productData._id}`); //ajax request to pull data on this item.
+
+    if (data.countInStock < quantity) {
+      window.alert("Sorry. Product is out of stock. Call to order or reserve!");
+      return;
+    }
+
     ctxDispatch({
       type: "CART_ADD_ITEM",
       payload: { ...productData, quantity: 1 }, //this is the item and 1 amount is added to cart

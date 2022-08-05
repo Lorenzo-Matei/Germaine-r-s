@@ -12,7 +12,6 @@ import { StoreProvider } from "./Store";
 ReactDOM.render(
   <React.StrictMode>
     <StoreProvider>
-      {" "}
       {/** this take enables you to add items to the cart without losing data when navigating. function is is Store.jsx */}
       <HelmetProvider>
         <App />
