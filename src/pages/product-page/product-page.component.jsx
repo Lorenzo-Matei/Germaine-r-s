@@ -175,7 +175,7 @@ function ProductPage() {
 
     ctxDispatch({
       type: "CART_ADD_ITEM",
-      payload: { ...productData, quantity: 1 }, //this is the item and 1 amount is added to cart
+      payload: { ...productData, quantity }, //this is the item and 1 amount is added to cart
     });
   };
 

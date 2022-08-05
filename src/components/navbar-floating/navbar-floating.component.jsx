@@ -132,7 +132,12 @@ const NavBarFloating = () => {
                     <FaShoppingCart className="button-icon" />
                     {cart.cartItems.length > 0 && ( //if carts items in context exists and is great than 0 items
                       <Badge id="badge-cart-num" outline theme="danger">
-                        {cart.cartItems.length}
+                        {cart.cartItems.reduce(
+                          // test
+                          (accumulator, currentItem) =>
+                            accumulator + currentItem.quantity,
+                          0
+                        )}
                         {/** show a badge with the number of items */}
                       </Badge>
                     )}
