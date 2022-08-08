@@ -36,11 +36,20 @@ const reducer = (state, action) => {
   }
 };
 
+function getFiles() {
+  // const files = [];
+  const files = process.env.PUBLIC_URL + "/test-products";
+  console.log(files);
+}
+
 const ProductSearchPage = () => {
   // const[filterMenuWidth, setFilterMenuWidth] = useState('3px');
   const [showFilterMenu, setShowFilterMenu] = useState(false);
   const [filterMenuWidth, setFilterMenuWidth] = useState(null);
   const searchFilterRef = useRef(null);
+
+  // const { state } = useContext(Store); //copied from product-page and removed dispatch as changes wont occur here
+  // const { cart } = state;
 
   //hooks
   const [{ loading, error, productsData }, dispatch] = useReducer(reducer, {
@@ -128,6 +137,7 @@ const ProductSearchPage = () => {
             ) : error ? (
               <ErrorMessageBox variant="danger">{error}</ErrorMessageBox> // if there is an 'error' then show the message
             ) : (
+              (getFiles(),
               // otherwise show products
               productsData.map((product) => (
                 <ProductSearchItem
@@ -139,7 +149,7 @@ const ProductSearchPage = () => {
                   rating={product.rating}
                   price={product.price}
                 />
-              ))
+              )))
             )}
           </div>
         </div>

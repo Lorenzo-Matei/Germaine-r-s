@@ -17,6 +17,8 @@ import { Store } from "../../Store";
 import { FaMinus, FaPlus, FaTrash } from "react-icons/fa";
 
 import "./cart-page.styles.scss";
+import axios from "axios";
+import ProductPage from "../product-page/product-page.component";
 
 const CartPage = () => {
   const { state, dispatch: ctxdispatch } = useContext(Store); //this will access to store and variables in cart from the backend
@@ -24,6 +26,22 @@ const CartPage = () => {
   const {
     cart: { cartItems }, //this is the list of cart items
   } = state;
+
+  const updateCartQuantityHandler = async (item, quantity) => {
+    const { data } = await axios.get(`/api/productsData/${item._id}`); //ajax request to get current product from backend
+
+    if (data.countInStock < quantity) {
+      // checks the items inventory quantity, if stock is less than quantity on cart.
+      window.alert("Sorry. Product is out of stock");
+      return;
+    }
+
+    ctxdispatch({
+      //copied from product page
+      type: "CART_ADD_ITEM",
+      payload: { ...item, quantity },
+    });
+  };
 
   return (
     <div className="cart-page-container">
@@ -59,10 +77,13 @@ const CartPage = () => {
                       <Link to={`/product/${item.slug}`}>{item.name}</Link>
                     </Col>
                     <Col md={3}>
-                      <Button
+                      <Button // decrease '-' quantity button
                         outline
                         pill
                         theme="light"
+                        onClick={() =>
+                          updateCartQuantityHandler(item, item.quantity - 1)
+                        }
                         disabled={item.quantity === 1} // were not gonna make item quantity less than 1 so its disabled when its one
                         className="quantity-mod-btn"
                       >
@@ -75,10 +96,13 @@ const CartPage = () => {
                       >
                         {item.quantity}
                       </Badge>
-                      <Button
+                      <Button // this is the increase '+' quantity button
                         outline
                         pill
                         theme="light"
+                        onClick={() =>
+                          updateCartQuantityHandler(item, item.quantity + 1)
+                        }
                         disabled={
                           item.quantity === item.countInStock ||
                           item.quantity === 99
@@ -166,7 +190,7 @@ const CartPage = () => {
                   <Button
                     className="cart-page-checkout-btn"
                     type="button"
-                    theme="light"
+                    theme="success"
                     disabled={cartItems.length === 0} //if no items in cart, button doesnt work
                   >
                     Proceed to Checkout

@@ -133,7 +133,7 @@ const NavBarFloating = () => {
                     {cart.cartItems.length > 0 && ( //if carts items in context exists and is great than 0 items
                       <Badge id="badge-cart-num" outline theme="danger">
                         {cart.cartItems.reduce(
-                          // test
+                          // this ensures that no duplicates are created, only increases the quantity of that item
                           (accumulator, currentItem) =>
                             accumulator + currentItem.quantity,
                           0
