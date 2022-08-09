@@ -43,6 +43,10 @@ const CartPage = () => {
     });
   };
 
+  const removeItemHandler = (item) => {
+    ctxdispatch({ type: "CART_REMOVE_ITEM", payload: item });
+  };
+
   return (
     <div className="cart-page-container">
       {/* ---------------------------------------- */}
@@ -74,7 +78,12 @@ const CartPage = () => {
                         className="img-fluid rounded img-thumbnail"
                       ></img>{" "}
                       {/*  {" "} -> this creates a space between elements */}
-                      <Link to={`/product/${item.slug}`}>{item.name}</Link>
+                      <Link
+                        id="cart-page-item-name"
+                        to={`/product/${item.slug}`}
+                      >
+                        {item.name}
+                      </Link>
                     </Col>
                     <Col md={3}>
                       <Button // decrease '-' quantity button
@@ -117,10 +126,11 @@ const CartPage = () => {
                       <h3 className="cart-page-price">$ {item.price}</h3>
                     </Col>
                     <Col md={1}>
-                      <Button
+                      <Button // trash item button
                         outline
                         pill
                         theme="light"
+                        onClick={() => removeItemHandler(item)}
                         className="quantity-mod-btn"
                       >
                         <FaTrash />

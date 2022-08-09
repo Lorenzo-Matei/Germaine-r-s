@@ -26,6 +26,13 @@ function reducer(state, action) {
         : [...state.cart.cartItems, newItem]; //if itemExists is null then we need to add item to the end of the array
       return { ...state, cart: { ...state.cart, cartItems } };
 
+    case "CART_REMOVE_ITEM": {
+      const cartItems = state.cart.cartItems.filter(
+        (item) => item._id !== action.payload._id // if item._id doesnt equal action.payload._id (aka: current id) then remove it.
+      );
+      return { ...state, cart: { ...state.cart, cartItems } };
+    }
+
     default:
       return state;
   }
