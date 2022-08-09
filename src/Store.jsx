@@ -4,8 +4,9 @@ export const Store = createContext();
 
 const initialState = {
   cart: {
-    cartItems: [],
-    cartQuantities: [],
+    cartItems: localStorage.getItem("cartItems") //if cart items exists in the localstorage
+      ? JSON.parse(localStorage.getItem("cartItems")) //use JSON.parse to convert local storage cartITems(which are string rn) into javacript object (aka json)
+      : [],
   },
 };
 
@@ -24,12 +25,14 @@ function reducer(state, action) {
             ) => (item._id === itemExists._id ? newItem : item) //when item is found in cart and it matches with what you wanna add then it updates the quantity ':' otherwise adds the item
           )
         : [...state.cart.cartItems, newItem]; //if itemExists is null then we need to add item to the end of the array
+      localStorage.setItem("cartItems", JSON.stringify(cartItems)); // cart items are converted to a string and saved in the cartItems variable which is then saved on the devices local storage.
       return { ...state, cart: { ...state.cart, cartItems } };
 
     case "CART_REMOVE_ITEM": {
       const cartItems = state.cart.cartItems.filter(
         (item) => item._id !== action.payload._id // if item._id doesnt equal action.payload._id (aka: current id) then remove it.
       );
+      localStorage.setItem("cartItems", JSON.stringify(cartItems)); // cart items are converted to a string and saved in the cartItems variable which is then saved on the devices local storage.
       return { ...state, cart: { ...state.cart, cartItems } };
     }
 
