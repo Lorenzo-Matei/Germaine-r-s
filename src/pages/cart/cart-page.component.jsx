@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Badge,
   Button,
-  Card,
-  CardBody,
   Col,
   ListGroup,
   ListGroupItem,
@@ -21,6 +19,7 @@ import axios from "axios";
 import ProductPage from "../product-page/product-page.component";
 
 const CartPage = () => {
+  const navigate = useNavigate();
   const { state, dispatch: ctxdispatch } = useContext(Store); //this will access to store and variables in cart from the backend
 
   const {
@@ -45,6 +44,12 @@ const CartPage = () => {
 
   const removeItemHandler = (item) => {
     ctxdispatch({ type: "CART_REMOVE_ITEM", payload: item });
+  };
+
+  const checkoutHandler = () => {
+    //1st -> checks if they are signedin/authenticated
+    // if they arent authenticated then they will be redirected to the shipping page.
+    navigate("/signin?redirect=/shipping");
   };
 
   return (
@@ -201,6 +206,7 @@ const CartPage = () => {
                     className="cart-page-checkout-btn"
                     type="button"
                     theme="success"
+                    onClick={checkoutHandler}
                     disabled={cartItems.length === 0} //if no items in cart, button doesnt work
                   >
                     Proceed to Checkout

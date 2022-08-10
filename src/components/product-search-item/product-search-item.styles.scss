@@ -156,8 +156,20 @@
 .product-listing-cart-button {
   padding: 8px;
   height: 35px;
-  // margin-right: 5px;
+  min-width: 90px;
   margin-top: 5px;
+  z-index: 10;
+}
+
+.product-listing-cart-button-no-stock {
+  padding: 8px;
+  height: 35px;
+  margin-top: 5px;
+  min-width: 100px;
+
+  font-size: x-small;
+  font-weight: 700;
+
   z-index: 10;
 }
 

@@ -141,6 +141,8 @@ const ProductSearchPage = () => {
               // otherwise show products
               productsData.map((product) => (
                 <ProductSearchItem
+                  key={product.slug}
+                  _id={product._id}
                   brand={product.Brand}
                   name={product.name}
                   slug={product.slug}
@@ -148,6 +150,7 @@ const ProductSearchPage = () => {
                   image={product.image}
                   rating={product.rating}
                   price={product.price}
+                  countInStock={product.countInStock}
                 />
               )))
             )}

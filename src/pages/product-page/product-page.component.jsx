@@ -169,6 +169,7 @@ function ProductPage() {
     const quantity = itemExists ? itemExists.quantity + 1 : 1; // '?' if itemExists then increase quantity +1 ':' otherwise make quantity 1
     const { data } = await axios.get(`/api/productsData/${productData._id}`); //ajax request to pull data on this item.
 
+    // console.log("const data on product page: ", data);
     if (data.countInStock < quantity) {
       window.alert("Sorry. Product is out of stock. Call to order or reserve!");
       return;
