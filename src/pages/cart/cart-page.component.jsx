@@ -49,7 +49,7 @@ const CartPage = () => {
   const checkoutHandler = () => {
     //1st -> checks if they are signedin/authenticated
     // if they arent authenticated then they will be redirected to the shipping page.
-    navigate("/signin?redirect=/shipping");
+    navigate("/sign-in?redirect=/shipping");
   };
 
   return (

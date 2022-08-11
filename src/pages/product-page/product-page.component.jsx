@@ -247,11 +247,15 @@ function ProductPage() {
               // emptyStyle={{ border: "solid 1px #fff" }}
             />
           </div>
-
-          {/* <h3 id="product-page-stock-indicator">In Stock.</h3> */}
-          <Badge outline theme="success" id="product-page-stock-indicator">
-            In Stock
-          </Badge>
+          {productData.countInStock === 0 ? (
+            <Badge outline theme="danger" id="product-page-stock-indicator">
+              Out of Stock
+            </Badge>
+          ) : (
+            <Badge outline theme="success" id="product-page-stock-indicator">
+              In Stock
+            </Badge>
+          )}
 
           <h5 id="variant-title">Variant</h5>
           <FormSelect size="sm" id="product-page-formselect">
