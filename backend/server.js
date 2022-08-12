@@ -2,6 +2,23 @@ import react from "react";
 import express from "express";
 import data from "./productsData.js";
 
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config(); // enables fetching of variables in .env file
+
+const connect = mongoose.connect(process.env.MONGODB_URI); // fetches the .env mondodb connection variable
+
+connect
+  .then(() => {
+    console.log("Connected to Database");
+  })
+  .catch((err) => {
+    console.log("error: " + err.message);
+  });
+// you can also install mongodb locally on your machine by going to 'install mongodb community edition
+// there is also a GUI you can install from mongodb known as 'compass'
+
 const app = express();
 app.get("/api/productsData", (req, res) => {
   res.send(data.products);
