@@ -1,9 +1,11 @@
 import react from "react";
 import express from "express";
-import data from "./productsData.js";
+import data from "./GRSInventoryData.js";
 
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import seedRouter from "./routes/seedRoutes.js";
+import productRouter from "./routes/productRoutes.js";
 
 dotenv.config(); // enables fetching of variables in .env file
 
@@ -20,9 +22,14 @@ connect
 // there is also a GUI you can install from mongodb known as 'compass'
 
 const app = express();
-app.get("/api/productsData", (req, res) => {
-  res.send(data.products);
-});
+//now we grab the data from GRSInvetoryData which will be store according to seedRoutes.jsx
+app.use("/api/seed", seedRouter); //this grabs the data from the server that holds the data which is located at 'localhost:/api/seed'
+app.use("/api/products", productRouter);
+
+// this is used when grabbing test products from the productsData.js
+// app.get("/api/productsData", (req, res) => {
+//   res.send(data.products);
+// });
 
 app.get("/api/productsData/slug/:slug", (req, res) => {
   // backend api that returns information on a product based on the slug of the product
