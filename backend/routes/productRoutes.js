@@ -10,9 +10,12 @@ productRouter.get("/", async (req, res) => {
   res.send(products); // sends products to front end
 });
 
+//  ///////////////// moved from server.js   //////////////////////
+
 productRouter.get("/slug/:slug", async (req, res) => {
   // backend api that returns information on a product based on the slug of the product
   const product = await Product.findOne({ slug: req.params.slug }); // queries products and looks for the data associated with the slug
+  // the slug is the data entered by user in url
 
   if (product) {
     //if the product is found/exists
@@ -33,5 +36,6 @@ productRouter.get("/:id", async (req, res) => {
     res.status(404).send({ message: "product NOT FOUND" }); // otherwise if a error status of (404) exists then send a message to the front
   }
 });
+//  /////////////////   //////////////////////
 
 export default productRouter;

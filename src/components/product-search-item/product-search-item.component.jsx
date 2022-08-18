@@ -40,6 +40,14 @@ function ProductSearchItem(props) {
     });
   };
 
+  function checkPrice(price) {
+    if (price > 0.0) {
+      return "$ " + price;
+    } else {
+      return "Call For Price";
+    }
+  }
+
   return (
     <div className="search-item-card">
       <div className="search-item-cardbody">
@@ -61,6 +69,23 @@ function ProductSearchItem(props) {
           <Badge className="product-card-badge" outline theme="success">
             NEW!
           </Badge>
+          if ({props.gasType} == "Propane")
+          {
+            // console.log("propane: " + props.gasType);
+            <Badge className="product-card-badge-fuel" outline theme="info">
+              PROPANE
+            </Badge>
+          }
+          else if ({props.gasType} == "Natural Gas")
+          {
+            // console.log("natural gas: " + props.gasType);
+            <Badge className="product-card-badge-fuel" outline theme="warning">
+              NATURAL
+              <br />
+              GAS
+            </Badge>
+          }
+          else{}
         </div>
 
         <div className="rightside-product-item">
@@ -85,7 +110,7 @@ function ProductSearchItem(props) {
               outline
               theme="light"
             >
-              {"$ " + props.price}
+              {checkPrice(props.price)}
             </Badge>
             {props.countInStock === 0 ? (
               <Button

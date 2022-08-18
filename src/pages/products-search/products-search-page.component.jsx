@@ -38,7 +38,7 @@ const reducer = (state, action) => {
 
 function getFiles() {
   // const files = [];
-  const files = process.env.PUBLIC_URL + "/test-products";
+  const files = process.env.PUBLIC_URL + "/products";
   console.log(files);
 }
 
@@ -72,7 +72,10 @@ const ProductSearchPage = () => {
       dispatch({ type: ACTIONS.FETCH_REQUEST });
 
       try {
-        const result = await axios.get("/api/productsData"); //sends ajax request to the address specified- api
+        //old
+        const result = await axios.get("/api/products"); //sends ajax request to the address specified- api
+        // this is address used in server.js
+        // const result = await axios.get("/api/products"); //sends ajax request to the address specified- api
 
         dispatch({
           type: ACTIONS.FETCH_SUCCESS,
@@ -92,6 +95,29 @@ const ProductSearchPage = () => {
   }, []); // 2nd parameter - after the , - specifies when to to do it, in this case its after the first render and only do it once.
   // therefore useEffect will run this function after the 1st render of this component
 
+  function getBrandLogo(brand) {
+    brand = brand.toLowerCase();
+
+    switch (brand) {
+      case "blodgett":
+        return "/assets/images/logos/winco.png";
+
+      case "ecomax":
+        return "/assets/images/logos/ecomax.png";
+
+      case "hobart":
+        return "/assets/images/logos/hobart.png";
+
+      case "vulcan":
+        return "/assets/images/logos/vulcan.png";
+
+      case "winco":
+        return "/assets/images/logos/winco.png";
+
+      case "wusthof":
+        return "/assets/images/logos/wusthof.png";
+    }
+  }
   const changeIcon = (icon) =>
     icon.classList.toggle(<IoIosCloseCircleOutline />);
 
@@ -139,18 +165,28 @@ const ProductSearchPage = () => {
             ) : (
               (getFiles(),
               // otherwise show products
-              productsData.map((product) => (
+              productsData.slice(0, 16).map((product) => (
                 <ProductSearchItem
                   key={product.slug}
                   _id={product._id}
-                  brand={product.Brand}
-                  name={product.name}
                   slug={product.slug}
-                  brandLogo={product.brandLogo}
-                  image={product.image}
-                  rating={product.rating}
-                  price={product.price}
-                  countInStock={product.countInStock}
+                  name={
+                    product.productBrand +
+                    " " +
+                    product.productName +
+                    " " +
+                    product.modelVariant +
+                    " " +
+                    product.gasType
+                  }
+                  brand={product.productBrand}
+                  brandLogo={getBrandLogo(product.productBrand)}
+                  // image={product.image}
+                  image={`/assets/images/test-products-images-nobg/${product.images[0]}`}
+                  // rating={product.rating}
+                  price={product.onlinePrice[0]}
+                  gasType={product.gasType}
+                  // countInStock={product.countInStock}
                 />
               )))
             )}
