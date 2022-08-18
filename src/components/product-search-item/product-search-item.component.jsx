@@ -48,6 +48,28 @@ function ProductSearchItem(props) {
     }
   }
 
+  // const gasType = {props.gasType};
+
+  function fuelBadgeHandler(gas) {
+    // if (gas == "Natural Gas") {
+    //   return (
+    //     <Badge className="product-card-badge-fuel" outline theme="warning">
+    //       NATURAL <br />
+    //       GAS
+    //     </Badge>
+    //   );
+    // } else
+    if (gas == "Propane") {
+      return (
+        <Badge className="product-card-badge-fuel" outline theme="info">
+          PROPANE
+        </Badge>
+      );
+    } else {
+      //
+    }
+  }
+
   return (
     <div className="search-item-card">
       <div className="search-item-cardbody">
@@ -69,23 +91,7 @@ function ProductSearchItem(props) {
           <Badge className="product-card-badge" outline theme="success">
             NEW!
           </Badge>
-          if ({props.gasType} == "Propane")
-          {
-            // console.log("propane: " + props.gasType);
-            <Badge className="product-card-badge-fuel" outline theme="info">
-              PROPANE
-            </Badge>
-          }
-          else if ({props.gasType} == "Natural Gas")
-          {
-            // console.log("natural gas: " + props.gasType);
-            <Badge className="product-card-badge-fuel" outline theme="warning">
-              NATURAL
-              <br />
-              GAS
-            </Badge>
-          }
-          else{}
+          {fuelBadgeHandler(props.gasType)};
         </div>
 
         <div className="rightside-product-item">

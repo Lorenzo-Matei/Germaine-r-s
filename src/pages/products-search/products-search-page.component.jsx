@@ -165,7 +165,7 @@ const ProductSearchPage = () => {
             ) : (
               (getFiles(),
               // otherwise show products
-              productsData.slice(0, 16).map((product) => (
+              productsData.slice(10, 26).map((product) => (
                 <ProductSearchItem
                   key={product.slug}
                   _id={product._id}
