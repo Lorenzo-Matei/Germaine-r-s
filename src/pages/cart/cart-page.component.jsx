@@ -27,9 +27,9 @@ const CartPage = () => {
   } = state;
 
   const updateCartQuantityHandler = async (item, quantity) => {
-    const { data } = await axios.get(`/api/productsData/${item._id}`); //ajax request to get current product from backend
+    const { data } = await axios.get(`/api/products/${item._id}`); //ajax request to get current product from backend
 
-    if (data.countInStock < quantity) {
+    if (data.inStock < quantity) {
       // checks the items inventory quantity, if stock is less than quantity on cart.
       window.alert("Sorry. Product is out of stock");
       return;
@@ -51,6 +51,15 @@ const CartPage = () => {
     // if they arent authenticated then they will be redirected to the shipping page.
     navigate("/sign-in?redirect=/shipping");
   };
+
+  // const productFullName =
+  //   item.productBrand +
+  //   " " +
+  //   item.productName +
+  //   " " +
+  //   item.modelVariant +
+  //   " " +
+  //   item.gasType;
 
   return (
     <div className="cart-page-container">
@@ -79,7 +88,7 @@ const CartPage = () => {
                     <Col md={4}>
                       <img
                         src={item.image}
-                        alt={item.name}
+                        alt={item.image}
                         className="img-fluid rounded img-thumbnail"
                       ></img>{" "}
                       {/*  {" "} -> this creates a space between elements */}
@@ -87,7 +96,13 @@ const CartPage = () => {
                         id="cart-page-item-name"
                         to={`/product/${item.slug}`}
                       >
-                        {item.name}
+                        {item.productBrand +
+                          " " +
+                          item.productName +
+                          " " +
+                          item.modelVariant +
+                          " " +
+                          item.gasType}
                       </Link>
                     </Col>
                     <Col md={3}>
@@ -128,7 +143,7 @@ const CartPage = () => {
                     </Col>
 
                     <Col md={2}>
-                      <h3 className="cart-page-price">$ {item.price}</h3>
+                      <h3 className="cart-page-price">$ {item.onlinePrice}</h3>
                     </Col>
                     <Col md={1}>
                       <Button // trash item button

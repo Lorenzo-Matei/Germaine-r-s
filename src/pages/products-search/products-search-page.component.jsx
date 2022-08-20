@@ -165,7 +165,7 @@ const ProductSearchPage = () => {
             ) : (
               (getFiles(),
               // otherwise show products
-              productsData.slice(10, 26).map((product) => (
+              productsData.slice(10, 25).map((product) => (
                 <ProductSearchItem
                   key={product.slug}
                   _id={product._id}
@@ -177,7 +177,10 @@ const ProductSearchPage = () => {
                     " " +
                     product.modelVariant +
                     " " +
-                    product.gasType
+                    product.gasType +
+                    " " +
+                    product.voltage +
+                    "V"
                   }
                   brand={product.productBrand}
                   brandLogo={getBrandLogo(product.productBrand)}
@@ -186,7 +189,7 @@ const ProductSearchPage = () => {
                   // rating={product.rating}
                   price={product.onlinePrice[0]}
                   gasType={product.gasType}
-                  // countInStock={product.countInStock}
+                  countInStock={product.inStock}
                 />
               )))
             )}

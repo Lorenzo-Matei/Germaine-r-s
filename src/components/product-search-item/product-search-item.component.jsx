@@ -42,9 +42,25 @@ function ProductSearchItem(props) {
 
   function checkPrice(price) {
     if (price > 0.0) {
-      return "$ " + price;
+      // return "$ " + price
+      return (
+        <Badge className="product-listing-price-badge" outline theme="light">
+          $ {price}
+        </Badge>
+      );
     } else {
-      return "Call For Price";
+      return (
+        <Badge
+          className="product-listing-price-badge"
+          id="product-listing-call-for-price"
+          outline
+          theme="light"
+        >
+          Call for Price
+        </Badge>
+      );
+
+      // return "Call For Price";
     }
   }
 
@@ -67,6 +83,68 @@ function ProductSearchItem(props) {
       );
     } else {
       //
+    }
+  }
+
+  function addToCartButton(props) {
+    //stock exists, price listed
+    //stock exists, call for price
+    // stock doesnt exist, price listed
+    // stock doesnt exist, call for price
+
+    //note: out of stock prompt doesnt appear if you cant press add to cart button.
+    if (props.countInStock <= 0 && props.price <= 0.0) {
+      // stock doesnt exist, call for price
+
+      return (
+        <Button
+          disabled
+          className="product-listing-cart-button-no-stock"
+          pill
+          theme="danger"
+        >
+          Out of Stock
+        </Button>
+      );
+    } else if (props.countInStock <= 0 && props.price > 0.0) {
+      // stock doesnt exist, price listed
+
+      return (
+        <Button
+          disabled
+          className="product-listing-cart-button-no-stock"
+          pill
+          theme="danger"
+        >
+          Out of Stock
+        </Button>
+      );
+    } else if (props.countInStock > 0 && props.price <= 0.0) {
+      //stock exists, call for price
+
+      return (
+        <Button
+          disabled
+          className="product-listing-cart-button-no-stock"
+          pill
+          theme="light"
+        >
+          519-966-0950
+        </Button>
+      );
+    } else if (props.countInStock > 0 && props.price > 0.0) {
+      //stock exists, price listed
+
+      return (
+        <Button
+          className="product-listing-cart-button"
+          onClick={() => addToCartHandler(props)}
+          pill
+          theme="light"
+        >
+          <MdOutlineAddShoppingCart className="product-add-cart-icon" />
+        </Button>
+      );
     }
   }
 
@@ -111,14 +189,14 @@ function ProductSearchItem(props) {
           </Link>
 
           <div className="cart-price-container">
-            <Badge
+            {/* <Badge
               className="product-listing-price-badge"
               outline
-              theme="light"
-            >
-              {checkPrice(props.price)}
-            </Badge>
-            {props.countInStock === 0 ? (
+              theme="light" */}
+            {checkPrice(props.price)}
+            {/* </Badge> */}
+            {addToCartButton(props)}
+            {/* {props.countInStock === 0 ? (
               <Button
                 disabled
                 className="product-listing-cart-button-no-stock"
@@ -136,7 +214,7 @@ function ProductSearchItem(props) {
               >
                 <MdOutlineAddShoppingCart className="product-add-cart-icon" />
               </Button>
-            )}
+            )} */}
           </div>
         </div>
       </div>

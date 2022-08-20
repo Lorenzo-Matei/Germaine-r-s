@@ -24,16 +24,32 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-bottom: 6%;
+  margin-bottom: 8%;
   justify-content: space-between;
 }
 
 .product-page-carousel-container {
-  //   width: 70%;
+  width: 68%;
+  height: 100%;
+
   //   height: 100%;
 }
 
+.carousel-image {
+  width: 750px;
+  height: 500px;
+  object-fit: contain;
+
+  // width: 300px;
+  // object-fit: scale-down;
+}
+
+.thumbnails {
+  width: 100%;
+}
+
 .thumbnail {
+  background-color: #fff;
   border-radius: 10px;
 }
 
@@ -198,6 +214,10 @@ option {
 //   width: 30%;
 // }
 
+.Collapsible {
+  width: 100%;
+}
+
 .product-page-collapsible-section {
   width: 100%;
   //   max-width: 300px;
@@ -224,4 +244,21 @@ option {
   -webkit-backdrop-filter: blur(10.5px);
   border-radius: 10px;
   border: 1px solid #fff;
+}
+
+.product-page-collapsible-column {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.product-page-collapsible-headers {
+  color: #fff;
+  font-weight: 500;
+}
+
+.product-page-collapsible-text {
+  color: #fff;
+  text-align: center;
+  margin: auto;
 }

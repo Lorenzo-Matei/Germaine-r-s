@@ -73,6 +73,13 @@ const productSchema = new mongoose.Schema( // mongoose.schema takes 2 parameters
       default: EMPTY_STRING,
     },
 
+    inStock: {
+      type: Number,
+      required: false,
+      unique: false,
+      // default: EMPTY_STRING,
+    },
+
     itemWeight: {
       type: String,
       required: false,
@@ -151,7 +158,7 @@ const productSchema = new mongoose.Schema( // mongoose.schema takes 2 parameters
       unique: false,
       default: EMPTY_STRING,
     },
-    btu: {
+    BTU: {
       type: String,
       required: false,
       unique: false,

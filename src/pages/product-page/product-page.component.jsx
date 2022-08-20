@@ -17,6 +17,8 @@ import {
   Button,
   Badge,
   Alert,
+  Col,
+  Row,
 } from "shards-react";
 import { Rating } from "react-simple-star-rating";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
@@ -49,6 +51,7 @@ const reducer = (state, action) => {
 
 function ProductPage() {
   const data = [
+    { image: "/assets/images/test-products-images-nobg/Vulcan-Vw35.png" },
     {
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
@@ -141,7 +144,7 @@ function ProductPage() {
       dispatch({ type: ACTIONS.FETCH_REQUEST });
 
       try {
-        const result = await axios.get(`/api/productsData/slug/${slug}`); //sends ajax request to the address specified- api
+        const result = await axios.get(`/api/products/slug/${slug}`); //sends ajax request to the address specified- api
 
         dispatch({
           type: ACTIONS.FETCH_SUCCESS,
@@ -167,7 +170,7 @@ function ProductPage() {
   const addToCartHandler = async () => {
     const itemExists = cart.cartItems.find((x) => x._id === productData._id); //checks if current product exists in the cart
     const quantity = itemExists ? itemExists.quantity + 1 : 1; // '?' if itemExists then increase quantity +1 ':' otherwise make quantity 1
-    const { data } = await axios.get(`/api/productsData/${productData._id}`); //ajax request to pull data on this item.
+    const { data } = await axios.get(`/api/products/${productData._id}`); //ajax request to pull data on this item.
 
     // console.log("const data on product page: ", data);
     if (data.countInStock < quantity) {
@@ -183,6 +186,160 @@ function ProductPage() {
     navigate("/cart");
   };
 
+  const productFullName =
+    productData.productBrand +
+    " " +
+    productData.productName +
+    " " +
+    productData.modelVariant +
+    " " +
+    productData.gasType;
+
+  const data1 = [
+    { image: "/assets/images/test-products-images-nobg/Vulcan-Vw3S.png" },
+    {
+      // image: `/assets/images/test-products-images-nobg/${productData.images[0]}`,
+    },
+    {
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
+      // caption: `<div>
+      //             San Francisco
+      //             <br/>
+      //             Next line
+      //           </div>`,
+    },
+  ];
+
+  function infoAvailableCheck(dataField) {
+    if (dataField.length > 0) {
+      return <h7 className="product-page-collapsible-text">{dataField}</h7>;
+    } else {
+      return <h5 className="product-page-collapsible-headers">None</h5>;
+    }
+  }
+
+  // const technicalInfoData = [{productData.Weight}]
+  // const warrantyInfoData = [{{productData.component1}}, productData.duration1},]
+  function renderWarrantyInfo(productData) {
+    //maybe add info headers parameter
+    const component1 = productData.component1;
+    const component2 = productData.component2;
+    const duration1 = productData.duration1;
+    const duration2 = productData.duration2;
+    const warrantyList = [];
+
+    function notEmpty(item) {
+      if (item > 0 || item != "") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    if (notEmpty(duration1)) {
+      warrantyList.push({
+        componentName: component1,
+        componentDuration: duration1,
+      });
+    }
+
+    if (notEmpty(duration2)) {
+      warrantyList.push({
+        componentName: component2,
+        componentDuration: duration2,
+      });
+    }
+    if (warrantyList.length > 0) {
+      return warrantyList.map((component) => (
+        <Col className="product-page-collapsible-column">
+          <h5 className="product-page-collapsible-headers">
+            {component.componentName}
+          </h5>
+          <br />
+          <h7 className="product-page-collapsible-text">
+            {component.componentDuration} Months
+          </h7>
+        </Col>
+      ));
+    }
+  }
+  // ///////////////////////////////////////////////////////////////////////////////////////////////////
+  function renderEnergyInfo(productData) {
+    //maybe add info headers parameter
+    const gasType = productData.gasType;
+    const phase = productData.phase;
+    const voltage = productData.voltage;
+    const BTU = productData.BTU;
+    const amps = productData.amps;
+
+    const fuelInfoList = [];
+
+    function notEmpty(item) {
+      if (item > 0 || item != "") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    if (notEmpty(gasType)) {
+      fuelInfoList.push({
+        energyHeader: "Energy Type",
+        energyDetail: gasType,
+      });
+    }
+
+    if (notEmpty(phase)) {
+      fuelInfoList.push({
+        energyHeader: "Phase",
+        energyDetail: phase,
+      });
+    }
+
+    if (notEmpty(voltage)) {
+      fuelInfoList.push({
+        energyHeader: "Voltage",
+        energyDetail: voltage,
+      });
+    }
+
+    if (notEmpty(BTU)) {
+      fuelInfoList.push({
+        energyHeader: "BTU",
+        energyDetail: BTU,
+      });
+    }
+
+    if (notEmpty(amps)) {
+      fuelInfoList.push({
+        energyHeader: "Amps",
+        energyDetail: amps,
+      });
+    }
+
+    if (fuelInfoList.length > 0) {
+      return fuelInfoList.map((energyInfo) => (
+        <Col className="product-page-collapsible-column">
+          <h5 className="product-page-collapsible-headers">
+            {energyInfo.energyHeader}
+          </h5>
+          <br />
+          <h7 className="product-page-collapsible-text">
+            {energyInfo.energyDetail}
+          </h7>
+        </Col>
+      ));
+    } else {
+      return (
+        <Col className="product-page-collapsible-column">
+          <h5 className="product-page-collapsible-headers">N/A</h5>
+        </Col>
+      );
+    }
+  }
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
   ////////////////////////////////////   copied from products-page-component  //////////////////////////
 
   return loading ? (
@@ -195,14 +352,15 @@ function ProductPage() {
   ) : (
     <div className="product-page-container">
       <Helmet>
-        <title>{productData.name}</title>
+        <title>{productFullName}</title>
       </Helmet>
 
       <div className="product-page-product-display-container">
         <div className="product-page-carousel-container">
           <Carousel
             className="product-page-carousel"
-            data={data}
+            // data={`/assets/images/test-products-images-nobg/${productData.images}`}
+            data={data1}
             time={200000}
             width="850px"
             height="500px"
@@ -213,9 +371,9 @@ function ProductPage() {
             captionPosition="bottom"
             automatic={true}
             dots={true}
-            pauseIconColor="white"
+            pauseIconColor="grey"
             pauseIconSize="40px"
-            slideBackgroundColor="darkgrey"
+            slideBackgroundColor="#fff"
             slideImageFit="cover"
             thumbnails={true}
             thumbnailWidth="100px"
@@ -229,11 +387,7 @@ function ProductPage() {
         </div>
 
         <div className="item-info-card" id="purchase-card">
-          <h1 id="product-page-title">{productData.name}</h1>
-          {/* 
-          <h2 id="product-page-product-description">
-            {productData.description}
-          </h2> */}
+          <h1 id="product-page-title">{productFullName}</h1>
 
           <div id="product-page-ratings-container">
             <Rating
@@ -247,7 +401,7 @@ function ProductPage() {
               // emptyStyle={{ border: "solid 1px #fff" }}
             />
           </div>
-          {productData.countInStock === 0 ? (
+          {productData.inStock === 0 ? (
             <Badge outline theme="danger" id="product-page-stock-indicator">
               Out of Stock
             </Badge>
@@ -286,7 +440,7 @@ function ProductPage() {
             $ {productData.price}
           </Badge> */}
 
-          <h3 id="product-page-price">$ {productData.price}</h3>
+          <h3 id="product-page-price">$ {productData.onlinePrice[0]}</h3>
 
           <Button
             id="product-page-cart-btn"
@@ -301,9 +455,7 @@ function ProductPage() {
           </Button>
         </div>
       </div>
-
       {/* /////////////////////////////////////////////////////////////// */}
-
       <div className="product-page-technicals-container">
         <Collapsible
           className="product-page-collapsible"
@@ -319,7 +471,7 @@ function ProductPage() {
           }
         >
           <div className="product-page-collapsible-info">
-            {productData.description}
+            {infoAvailableCheck(productData.shortDescription)}
           </div>
         </Collapsible>
 
@@ -337,17 +489,30 @@ function ProductPage() {
           }
         >
           <div className="product-page-collapsible-info">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
-            officiis dolorem, fugiat nihil eligendi at? Cupiditate architecto
-            quos ducimus qui est sed dolor reiciendis, dignissimos voluptatibus
-            eum doloribus molestias autem. Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Similique officiis dolorem, fugiat
-            nihil eligendi at? Cupiditate architecto quos ducimus qui est sed
-            dolor reiciendis, dignissimos voluptatibus eum doloribus molestias
-            autem. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Similique officiis dolorem, fugiat nihil eligendi at? Cupiditate
-            architecto quos ducimus qui est sed dolor reiciendis, dignissimos
-            voluptatibus eum doloribus molestias autem.
+            <Row>
+              <Col className="product-page-collapsible-column">
+                <h5 className="product-page-collapsible-headers">Weight</h5>
+                <br />
+                <h7 className="product-page-collapsible-text">
+                  {productData.itemWeight}
+                </h7>
+              </Col>
+              <Col className="product-page-collapsible-column">
+                <h5 className="product-page-collapsible-headers">Dimensions</h5>
+                <br />
+                <h7 className="product-page-collapsible-text">
+                  {productData.dimensions}
+                </h7>
+              </Col>
+
+              <Col className="product-page-collapsible-column">
+                <h5 className="product-page-collapsible-headers">Model</h5>
+                <br />
+                <h7 className="product-page-collapsible-text">
+                  {productData.storeSKU}
+                </h7>
+              </Col>
+            </Row>
           </div>
         </Collapsible>
         {/* </div> */}
@@ -365,10 +530,27 @@ function ProductPage() {
           }
         >
           <div className="product-page-collapsible-info">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
-            officiis dolorem, fugiat nihil eligendi at? Cupiditate architecto
-            quos ducimus qui est sed dolor reiciendis, dignissimos voluptatibus
-            eum doloribus molestias autem.
+            <Row>
+              {renderWarrantyInfo(productData)}
+              <Col className="product-page-collapsible-column">
+                <h5 className="product-page-collapsible-headers">
+                  Parts & Labour
+                </h5>
+                <br />
+                <h7 className="product-page-collapsible-text">
+                  {productData.partsAndLabour} Months
+                </h7>
+              </Col>
+              <Col className="product-page-collapsible-column">
+                <h5 className="product-page-collapsible-headers">
+                  General Warranty
+                </h5>
+                <br />
+                <h7 className="product-page-collapsible-text">
+                  {productData.general} Months
+                </h7>
+              </Col>
+            </Row>
           </div>
         </Collapsible>
 
@@ -380,15 +562,12 @@ function ProductPage() {
               outline
               theme="light"
             >
-              Fuel Information
+              Energy Information
             </Button>
           }
         >
           <div className="product-page-collapsible-info">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
-            officiis dolorem, fugiat nihil eligendi at? Cupiditate architecto
-            quos ducimus qui est sed dolor reiciendis, dignissimos voluptatibus
-            eum doloribus molestias autem.
+            <Row>{renderEnergyInfo(productData)}</Row>
           </div>
         </Collapsible>
 
@@ -405,10 +584,13 @@ function ProductPage() {
           }
         >
           <div className="product-page-collapsible-info">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
-            officiis dolorem, fugiat nihil eligendi at? Cupiditate architecto
-            quos ducimus qui est sed dolor reiciendis, dignissimos voluptatibus
-            eum doloribus molestias autem.
+            <Row>
+              <Col className="product-page-collapsible-column">
+                <h5 className="product-page-collapsible-headers"></h5>
+                <br />
+                {infoAvailableCheck(productData.additionalInfo)}
+              </Col>
+            </Row>
           </div>
         </Collapsible>
       </div>
