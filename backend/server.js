@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import seedRouter from "./routes/seedRoutes.js";
 import productRouter from "./routes/productRoutes.js";
+import userRouter from "./routes/userRoutes.js";
 
 dotenv.config(); // enables fetching of variables in .env file
 
@@ -25,37 +26,11 @@ const app = express();
 //now we grab the data from GRSInvetoryData which will be store according to seedRoutes.jsx
 app.use("/api/seed", seedRouter); //this grabs the data from the server that holds the data which is located at 'localhost:/api/seed'
 app.use("/api/products", productRouter);
+app.use("/api/users", userRouter);
 
-// this is used when grabbing test products from the productsData.js
-// app.get("/api/productsData", (req, res) => {
-//   res.send(data.products);
-// });
-
-//    //////////   section moved to productRoutes.js  /////////////
-// app.get("/api/productsData/slug/:slug", (req, res) => {
-//   // backend api that returns information on a product based on the slug of the product
-//   const product = data.products.find((x) => x.slug === req.params.slug); // queries products and looks for the data associated with the slug
-
-//   if (product) {
-//     //if the product is found/exists
-//     res.send(product); //respond by sending the product to front
-//   } else {
-//     res.status(404).send({ message: "product NOT FOUND" }); // otherwise if a error status of (404) exists then send a message to the front
-//   }
-// });
-
-// app.get("/api/productsData/:id", (req, res) => {
-//   // backend api that returns information on a product based on the id of the product
-//   const product = data.products.find((x) => x._id === req.params.id); // queries products and looks for the data (key) associated with the id
-
-//   if (product) {
-//     //if the product is found/exists
-//     res.send(product); //respond by sending the product to front
-//   } else {
-//     res.status(404).send({ message: "product NOT FOUND" }); // otherwise if a error status of (404) exists then send a message to the front
-//   }
-// });
-///////////////////////////////////////////////////////////////////
+app.user((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
+});
 
 const port = process.env.PORT || 5000;
 
