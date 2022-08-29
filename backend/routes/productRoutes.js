@@ -1,4 +1,5 @@
 import express from "express";
+import expressAsyncHandler from "express-async-handler";
 import Product from "../models/productModels.js";
 
 // copied from seedRoutes and alterred to product
@@ -9,6 +10,14 @@ productRouter.get("/", async (req, res) => {
   const products = await Product.find(); //imports all products
   res.send(products); // sends products to front end
 });
+
+productRouter.get(
+  "/categories",
+  expressAsyncHandler(async (req, res) => {
+    const categories = await Product.find().distinct("productCategory"); // finds distinct an unique categories without duplicates
+    res.send(categories);
+  })
+);
 
 //  ///////////////// moved from server.js   //////////////////////
 
