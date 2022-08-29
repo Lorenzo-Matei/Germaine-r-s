@@ -165,7 +165,7 @@ const ProductSearchPage = () => {
             ) : (
               (getFiles(),
               // otherwise show products
-              productsData.slice(10, 25).map((product) => (
+              productsData.slice(50, 65).map((product) => (
                 <ProductSearchItem
                   key={product.slug}
                   _id={product._id}
@@ -179,7 +179,7 @@ const ProductSearchPage = () => {
                     " " +
                     product.gasType +
                     " " +
-                    product.voltage +
+                    product.voltage + // need to create if statement for energy in name Gas and electric etc
                     "V"
                   }
                   brand={product.productBrand}

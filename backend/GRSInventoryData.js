@@ -52,7 +52,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-LG300.png"],
+      images: ["vulcan-lg300.png"],
     },
     {
       id: 1,
@@ -103,7 +103,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-LG300.png"],
+      images: ["vulcan-lg300.png"],
     },
     {
       id: 2,
@@ -154,7 +154,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-LG300.png"],
+      images: ["vulcan-lg300.png"],
     },
     {
       id: 3,
@@ -205,7 +205,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-LG300.png"],
+      images: ["vulcan-lg300.png"],
     },
     {
       id: 4,
@@ -256,7 +256,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-LG500.png"],
+      images: ["vulcan-lg500.png"],
     },
     {
       id: 5,
@@ -307,7 +307,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-LG500.png"],
+      images: ["vulcan-lg500.png"],
     },
     {
       id: 6,
@@ -358,7 +358,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1VEG35M.png"],
+      images: ["vulcan-1veg35m.png"],
     },
     {
       id: 7,
@@ -409,7 +409,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1GR35M.png"],
+      images: ["vulcan-1gr35m.png"],
     },
     {
       id: 8,
@@ -460,7 +460,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1GR35M.png"],
+      images: ["vulcan-1gr35m.png"],
     },
     {
       id: 9,
@@ -511,7 +511,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1GR35M.png"],
+      images: ["vulcan-1gr35m.png"],
     },
     {
       id: 10,
@@ -562,7 +562,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1GR35M.png"],
+      images: ["vulcan-1gr35m.png"],
     },
     {
       id: 11,
@@ -613,7 +613,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1GR65M.png"],
+      images: ["vulcan-1gr65m.png"],
     },
     {
       id: 12,
@@ -631,7 +631,7 @@ const data = {
       vendorSKU: "1GR65M-2",
       linkedSKU: "",
       itemSerial: "",
-      inStock: 0,
+      inStock: 10,
       itemWeight: "235 lb",
       dimensions: "21 in x 30 in x 36 in",
       freightClass: "85",
@@ -664,7 +664,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1GR65M.png"],
+      images: ["vulcan-1gr65m.png"],
     },
     {
       id: 13,
@@ -682,7 +682,7 @@ const data = {
       vendorSKU: "1GR85M-1",
       linkedSKU: "",
       itemSerial: "",
-      inStock: 0,
+      inStock: 10,
       itemWeight: "265 lb",
       dimensions: "21 in x 34.5 in x 36 in",
       freightClass: "85",
@@ -715,7 +715,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["1GR65M.png"],
+      images: ["vulcan-1gr65m.png"],
     },
     {
       id: 14,
@@ -766,7 +766,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["1GR65M.png"],
+      images: ["vulcan-1gr65m.png"],
     },
     {
       id: 15,
@@ -817,7 +817,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Frymate-15.png"],
+      images: ["vulcan-frymate-15.png"],
     },
     {
       id: 16,
@@ -868,7 +868,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Frymate-21S.png"],
+      images: ["vulcan-frymate-21s.png"],
     },
     {
       id: 17,
@@ -919,7 +919,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-ThermoGlo.png"],
+      images: ["vulcan-thermoglo.png"],
     },
     {
       id: 18,
@@ -971,7 +971,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MF-1-Mobile-Filter.png"],
+      images: ["vulcan-mf-1-mobile-filter.png"],
     },
     {
       id: 19,
@@ -1022,7 +1022,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1TR45DF.png"],
+      images: ["vulcan-1tr45df.png"],
     },
     {
       id: 20,
@@ -1073,7 +1073,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1TR65DF.png"],
+      images: ["vulcan-1tr65df.png"],
     },
     {
       id: 21,
@@ -1124,7 +1124,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["1TR65DF.png"],
+      images: ["vulcan-1tr65df.png"],
     },
     {
       id: 22,
@@ -1175,7 +1175,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-2TR45DF.png"],
+      images: ["vulcan-2tr45df.png"],
     },
     {
       id: 23,
@@ -1226,7 +1226,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-2TR45DF.png"],
+      images: ["vulcan-2tr45df.png"],
     },
     {
       id: 24,
@@ -1277,7 +1277,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-2TR45DF.png"],
+      images: ["vulcan-2tr45df.png"],
     },
     {
       id: 25,
@@ -1328,7 +1328,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-3TR45DF.png"],
+      images: ["vulcan-3tr45df.png"],
     },
     {
       id: 26,
@@ -1379,7 +1379,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-3TR45DF.png"],
+      images: ["vulcan-3tr45df.png"],
     },
     {
       id: 27,
@@ -1430,7 +1430,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-3TR45DF.png"],
+      images: ["vulcan-3tr45df.png"],
     },
     {
       id: 28,
@@ -1481,7 +1481,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-4TR45DF.png"],
+      images: ["vulcan-4tr45df.png"],
     },
     {
       id: 29,
@@ -1532,7 +1532,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-4TR45DF.png"],
+      images: ["vulcan-4tr45df.png"],
     },
     {
       id: 30,
@@ -1583,7 +1583,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-4TR45DF.png"],
+      images: ["vulcan-4tr45df.png"],
     },
     {
       id: 31,
@@ -1634,7 +1634,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-COVER-TANK.png"],
+      images: ["vulcan-cover-tank.png"],
     },
     {
       id: 32,
@@ -1685,7 +1685,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-COVER-TANK.png"],
+      images: ["vulcan-cover-tank.png"],
     },
     {
       id: 33,
@@ -1736,7 +1736,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-COVER-TANK.png"],
+      images: ["vulcan-cover-tank.png"],
     },
     {
       id: 34,
@@ -1787,7 +1787,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Basket-45.png"],
+      images: ["vulcan-basket-45.png"],
     },
     {
       id: 35,
@@ -1838,7 +1838,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Basket-65.png"],
+      images: ["vulcan-basket-65.png"],
     },
     {
       id: 36,
@@ -1889,7 +1889,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Basket-65.png"],
+      images: ["vulcan-basket-65.png"],
     },
     {
       id: 37,
@@ -1939,7 +1939,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Basket-Single-basket.png"],
+      images: ["vulcan-basket-single-basket.png"],
     },
     {
       id: 38,
@@ -1989,7 +1989,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Basket-Single-basket.png"],
+      images: ["vulcan-basket-single-basket.png"],
     },
     {
       id: 39,
@@ -2039,7 +2039,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Basket-Single-basket.png"],
+      images: ["vulcan-basket-single-basket.png"],
     },
     {
       id: 40,
@@ -2090,7 +2090,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Crumb-Screen.png"],
+      images: ["vulcan-crumb-screen.png"],
     },
     {
       id: 41,
@@ -2141,7 +2141,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Crumb-Screen.png"],
+      images: ["vulcan-crumb-screen.png"],
     },
     {
       id: 42,
@@ -2192,7 +2192,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Crumb-Screen.png"],
+      images: ["vulcan-crumb-screen.png"],
     },
     {
       id: 43,
@@ -2243,7 +2243,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Crumb-Screen.png"],
+      images: ["vulcan-crumb-screen.png"],
     },
     {
       id: 44,
@@ -2294,7 +2294,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Fryer-Casters.png"],
+      images: ["vulcan-fryer-casters.png"],
     },
     {
       id: 45,
@@ -2345,7 +2345,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Splash-Guard.png"],
+      images: ["vulcan-splash-guard.png"],
     },
     {
       id: 46,
@@ -2396,7 +2396,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Splash-Guard.png"],
+      images: ["vulcan-splash-guard.png"],
     },
     {
       id: 47,
@@ -2447,7 +2447,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-KleenScreen-PLUS-Conversion-Kit.png"],
+      images: ["vulcan-kleenscreen-plus-conversion-kit.png"],
     },
     {
       id: 48,
@@ -2498,7 +2498,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-KleenScreen-PLUS-Conversion-Kit.png"],
+      images: ["vulcan-kleenscreen-plus-conversion-kit.png"],
     },
     {
       id: 49,
@@ -2549,7 +2549,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-KleenScreen-PLUS-Conversion-Kit.png"],
+      images: ["vulcan-kleenscreen-plus-conversion-kit.png"],
     },
     {
       id: 50,
@@ -2600,7 +2600,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-KleenScreen-PLUS-Refill.png"],
+      images: ["vulcan-kleenscreen-plus-refill.png"],
     },
     {
       id: 51,
@@ -2651,7 +2651,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-KleenScreen-PLUS-Refill.png"],
+      images: ["vulcan-kleenscreen-plus-refill.png"],
     },
     {
       id: 52,
@@ -2702,7 +2702,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-KleenScreen-PLUS-Refill.png"],
+      images: ["vulcan-kleenscreen-plus-refill.png"],
     },
     {
       id: 53,
@@ -2753,7 +2753,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VACB25.png"],
+      images: ["vulcan-vacb25.png"],
     },
     {
       id: 54,
@@ -2804,7 +2804,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VACB36.png"],
+      images: ["vulcan-vacb36.png"],
     },
     {
       id: 55,
@@ -2855,7 +2855,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VACB47.png"],
+      images: ["vulcan-vacb47.png"],
     },
     {
       id: 56,
@@ -2906,7 +2906,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VACB60.png"],
+      images: ["vulcan-vacb60.png"],
     },
     {
       id: 57,
@@ -2957,7 +2957,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VACB72.png"],
+      images: ["vulcan-vacb72.png"],
     },
     {
       id: 58,
@@ -3008,7 +3008,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRB25.png"],
+      images: ["vulcan-vcrb25.png"],
     },
     {
       id: 59,
@@ -3059,7 +3059,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRB36.png"],
+      images: ["vulcan-vcrb36.png"],
     },
     {
       id: 60,
@@ -3110,7 +3110,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRB47.png"],
+      images: ["vulcan-vcrb47.png"],
     },
     {
       id: 61,
@@ -3161,7 +3161,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Connect-kit.png"],
+      images: ["vulcan-connect-kit.png"],
     },
     {
       id: 62,
@@ -3212,7 +3212,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Connect-kit.png"],
+      images: ["vulcan-connect-kit.png"],
     },
     {
       id: 63,
@@ -3262,7 +3262,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Splash-6.png"],
+      images: ["vulcan-splash-6.png"],
     },
     {
       id: 64,
@@ -3312,7 +3312,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Splash-6.png"],
+      images: ["vulcan-splash-6.png"],
     },
     {
       id: 65,
@@ -3362,7 +3362,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Splash-6.png"],
+      images: ["vulcan-splash-6.png"],
     },
     {
       id: 66,
@@ -3412,7 +3412,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Splash-6.png"],
+      images: ["vulcan-splash-6.png"],
     },
     {
       id: 67,
@@ -3462,7 +3462,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Splash-6.png"],
+      images: ["vulcan-splash-6.png"],
     },
     {
       id: 68,
@@ -3513,7 +3513,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Smoker-VACB.png"],
+      images: ["vulcan-smoker-vacb.png"],
     },
     {
       id: 69,
@@ -3564,7 +3564,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Smoker-VACB.png"],
+      images: ["vulcan-smoker-vacb.png"],
     },
     {
       id: 70,
@@ -3615,7 +3615,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Smoker-VACB.png"],
+      images: ["vulcan-smoker-vacb.png"],
     },
     {
       id: 71,
@@ -3666,7 +3666,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-Smoker-VACB.png"],
+      images: ["vulcan-smoker-vacb.png"],
     },
     {
       id: 72,
@@ -3717,7 +3717,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VACB25.png"],
+      images: ["vulcan-vacb25.png"],
     },
     {
       id: 73,
@@ -3768,7 +3768,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VACB36.png"],
+      images: ["vulcan-vacb36.png"],
     },
     {
       id: 74,
@@ -3819,7 +3819,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VACB47.png"],
+      images: ["vulcan-vacb47.png"],
     },
     {
       id: 75,
@@ -3870,7 +3870,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VACB60.png"],
+      images: ["vulcan-vacb60.png"],
     },
     {
       id: 76,
@@ -3921,7 +3921,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VACB72.png"],
+      images: ["vulcan-vacb72.png"],
     },
     {
       id: 77,
@@ -3972,7 +3972,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRB25.png"],
+      images: ["vulcan-vcrb25.png"],
     },
     {
       id: 78,
@@ -4023,7 +4023,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRB36.png"],
+      images: ["vulcan-vcrb36.png"],
     },
     {
       id: 79,
@@ -4074,7 +4074,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRB47.png"],
+      images: ["vulcan-vcrb47.png"],
     },
     {
       id: 80,
@@ -4126,7 +4126,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VTEC14.png"],
+      images: ["vulcan-vtec14.png"],
     },
     {
       id: 81,
@@ -4178,7 +4178,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VTEC25.png"],
+      images: ["vulcan-vtec25.png"],
     },
     {
       id: 82,
@@ -4230,7 +4230,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VTEC36.png"],
+      images: ["vulcan-vtec36.png"],
     },
     {
       id: 83,
@@ -4282,7 +4282,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VTEC48.png"],
+      images: ["vulcan-vtec48.png"],
     },
     {
       id: 84,
@@ -4334,7 +4334,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VTEC60.png"],
+      images: ["vulcan-vtec60.png"],
     },
     {
       id: 85,
@@ -4386,7 +4386,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VTEC14.png"],
+      images: ["vulcan-vtec14.png"],
     },
     {
       id: 86,
@@ -4438,7 +4438,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VTEC25.png"],
+      images: ["vulcan-vtec25.png"],
     },
     {
       id: 87,
@@ -4490,7 +4490,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VTEC36.png"],
+      images: ["vulcan-vtec36.png"],
     },
     {
       id: 88,
@@ -4542,7 +4542,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VTEC48.png"],
+      images: ["vulcan-vtec48.png"],
     },
     {
       id: 89,
@@ -4594,7 +4594,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VTEC60.png"],
+      images: ["vulcan-vtec60.png"],
     },
     {
       id: 90,
@@ -4646,7 +4646,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCCG24.png"],
+      images: ["vulcan-vccg24.png"],
     },
     {
       id: 91,
@@ -4698,7 +4698,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCCG36.png"],
+      images: ["vulcan-vccg36.png"],
     },
     {
       id: 92,
@@ -4750,7 +4750,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCCG48.png"],
+      images: ["vulcan-vccg48.png"],
     },
     {
       id: 93,
@@ -4802,7 +4802,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCCG60.png"],
+      images: ["vulcan-vccg60.png"],
     },
     {
       id: 94,
@@ -4853,7 +4853,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MSA24.png"],
+      images: ["vulcan-msa24.png"],
     },
     {
       id: 95,
@@ -4904,7 +4904,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MSA36.png"],
+      images: ["vulcan-msa36.png"],
     },
     {
       id: 96,
@@ -4955,7 +4955,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MSA48.png"],
+      images: ["vulcan-msa48.png"],
     },
     {
       id: 97,
@@ -5006,7 +5006,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MSA60.png"],
+      images: ["vulcan-msa60.png"],
     },
     {
       id: 98,
@@ -5057,7 +5057,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MSA72.png"],
+      images: ["vulcan-msa72.png"],
     },
     {
       id: 99,
@@ -5108,7 +5108,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MSA24.png"],
+      images: ["vulcan-msa24.png"],
     },
     {
       id: 100,
@@ -5159,7 +5159,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MSA36.png"],
+      images: ["vulcan-msa36.png"],
     },
     {
       id: 101,
@@ -5210,7 +5210,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MSA48.png"],
+      images: ["vulcan-msa48.png"],
     },
     {
       id: 102,
@@ -5261,7 +5261,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MSA60.png"],
+      images: ["vulcan-msa60.png"],
     },
     {
       id: 103,
@@ -5312,7 +5312,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MSA72.png"],
+      images: ["vulcan-msa72.png"],
     },
     {
       id: 104,
@@ -5363,7 +5363,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG24M.png"],
+      images: ["vulcan-vcrg24m.png"],
     },
     {
       id: 105,
@@ -5414,7 +5414,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG24M.png"],
+      images: ["vulcan-vcrg24m.png"],
     },
     {
       id: 106,
@@ -5465,7 +5465,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG36M.png"],
+      images: ["vulcan-vcrg36m.png"],
     },
     {
       id: 107,
@@ -5516,7 +5516,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG36M.png"],
+      images: ["vulcan-vcrg36m.png"],
     },
     {
       id: 108,
@@ -5567,7 +5567,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG48M.png"],
+      images: ["vulcan-vcrg48m.png"],
     },
     {
       id: 109,
@@ -5618,7 +5618,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG48M.png"],
+      images: ["vulcan-vcrg48m.png"],
     },
     {
       id: 110,
@@ -5669,7 +5669,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG24T.png"],
+      images: ["vulcan-vcrg24t.png"],
     },
     {
       id: 111,
@@ -5720,7 +5720,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG24T.png"],
+      images: ["vulcan-vcrg24t.png"],
     },
     {
       id: 112,
@@ -5771,7 +5771,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG36T.png"],
+      images: ["vulcan-vcrg36t.png"],
     },
     {
       id: 113,
@@ -5822,7 +5822,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG36T.png"],
+      images: ["vulcan-vcrg36t.png"],
     },
     {
       id: 114,
@@ -5873,7 +5873,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG48T.png"],
+      images: ["vulcan-vcrg48t.png"],
     },
     {
       id: 115,
@@ -5924,7 +5924,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRG48T.png"],
+      images: ["vulcan-vcrg48t.png"],
     },
     {
       id: 116,
@@ -5976,7 +5976,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VMCS101.png"],
+      images: ["vulcan-vmcs101.png"],
     },
     {
       id: 117,
@@ -6028,7 +6028,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VMCS101.png"],
+      images: ["vulcan-vmcs101.png"],
     },
     {
       id: 118,
@@ -6079,7 +6079,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP212.png"],
+      images: ["vulcan-vhp212.png"],
     },
     {
       id: 119,
@@ -6130,7 +6130,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP212.png"],
+      images: ["vulcan-vhp212.png"],
     },
     {
       id: 120,
@@ -6181,7 +6181,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP424.png"],
+      images: ["vulcan-vhp424.png"],
     },
     {
       id: 121,
@@ -6232,7 +6232,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP424.png"],
+      images: ["vulcan-vhp424.png"],
     },
     {
       id: 122,
@@ -6283,7 +6283,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP636.png"],
+      images: ["vulcan-vhp636.png"],
     },
     {
       id: 123,
@@ -6334,7 +6334,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP636.png"],
+      images: ["vulcan-vhp636.png"],
     },
     {
       id: 124,
@@ -6385,7 +6385,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP848.png"],
+      images: ["vulcan-vhp848.png"],
     },
     {
       id: 125,
@@ -6436,7 +6436,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP848.png"],
+      images: ["vulcan-vhp848.png"],
     },
     {
       id: 126,
@@ -6487,7 +6487,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP212U.png"],
+      images: ["vulcan-vhp212u.png"],
     },
     {
       id: 127,
@@ -6538,7 +6538,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP212U.png"],
+      images: ["vulcan-vhp212u.png"],
     },
     {
       id: 128,
@@ -6589,7 +6589,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP424U.png"],
+      images: ["vulcan-vhp424u.png"],
     },
     {
       id: 129,
@@ -6640,7 +6640,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP424U.png"],
+      images: ["vulcan-vhp424u.png"],
     },
     {
       id: 130,
@@ -6691,7 +6691,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP636U.png"],
+      images: ["vulcan-vhp636u.png"],
     },
     {
       id: 131,
@@ -6742,7 +6742,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP636U.png"],
+      images: ["vulcan-vhp636u.png"],
     },
     {
       id: 132,
@@ -6793,7 +6793,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP848U.png"],
+      images: ["vulcan-vhp848u.png"],
     },
     {
       id: 133,
@@ -6844,7 +6844,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP848U.png"],
+      images: ["vulcan-vhp848u.png"],
     },
     {
       id: 134,
@@ -6895,7 +6895,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRH12.png"],
+      images: ["vulcan-vcrh12.png"],
     },
     {
       id: 135,
@@ -6946,7 +6946,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRH12.png"],
+      images: ["vulcan-vcrh12.png"],
     },
     {
       id: 136,
@@ -6997,7 +6997,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRH24.png"],
+      images: ["vulcan-vcrh24.png"],
     },
     {
       id: 137,
@@ -7048,7 +7048,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRH24.png"],
+      images: ["vulcan-vcrh24.png"],
     },
     {
       id: 138,
@@ -7099,7 +7099,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRH36.png"],
+      images: ["vulcan-vcrh36.png"],
     },
     {
       id: 139,
@@ -7150,7 +7150,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VCRH36.png"],
+      images: ["vulcan-vcrh36.png"],
     },
     {
       id: 140,
@@ -7201,7 +7201,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-24S4B.png"],
+      images: ["vulcan-24s4b.png"],
     },
     {
       id: 141,
@@ -7252,7 +7252,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-24S4B.png"],
+      images: ["vulcan-24s4b.png"],
     },
     {
       id: 142,
@@ -7303,7 +7303,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S6B.png"],
+      images: ["vulcan-36s6b.png"],
     },
     {
       id: 143,
@@ -7354,7 +7354,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S6B.png"],
+      images: ["vulcan-36s6b.png"],
     },
     {
       id: 144,
@@ -7405,7 +7405,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S6B.png"],
+      images: ["vulcan-36s6b.png"],
     },
     {
       id: 145,
@@ -7456,7 +7456,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S6B.png"],
+      images: ["vulcan-36s6b.png"],
     },
     {
       id: 146,
@@ -7507,7 +7507,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S2B24GT.png"],
+      images: ["vulcan-36s2b24gt.png"],
     },
     {
       id: 147,
@@ -7558,7 +7558,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S2B24GT.png"],
+      images: ["vulcan-36s2b24gt.png"],
     },
     {
       id: 148,
@@ -7610,7 +7610,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S2B24GT.png"],
+      images: ["vulcan-36s2b24gt.png"],
     },
     {
       id: 149,
@@ -7662,7 +7662,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S2B24GT.png"],
+      images: ["vulcan-36s2b24gt.png"],
     },
     {
       id: 150,
@@ -7713,7 +7713,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S36GT.png"],
+      images: ["vulcan-36s36gt.png"],
     },
     {
       id: 151,
@@ -7764,7 +7764,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S36GT.png"],
+      images: ["vulcan-36s36gt.png"],
     },
     {
       id: 152,
@@ -7815,7 +7815,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S36GT.png"],
+      images: ["vulcan-36s36gt.png"],
     },
     {
       id: 153,
@@ -7866,7 +7866,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36S36GT.png"],
+      images: ["vulcan-36s36gt.png"],
     },
     {
       id: 154,
@@ -7917,7 +7917,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-60SS10B.png"],
+      images: ["vulcan-60ss10b.png"],
     },
     {
       id: 155,
@@ -7968,7 +7968,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-60SS10B.png"],
+      images: ["vulcan-60ss10b.png"],
     },
     {
       id: 156,
@@ -8019,7 +8019,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-60SS10B.png"],
+      images: ["vulcan-60ss10b.png"],
     },
     {
       id: 157,
@@ -8070,7 +8070,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-60SS10B.png"],
+      images: ["vulcan-60ss10b.png"],
     },
     {
       id: 158,
@@ -8121,7 +8121,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-SX244B.png"],
+      images: ["vulcan-sx244b.png"],
     },
     {
       id: 159,
@@ -8172,7 +8172,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-SX244B.png"],
+      images: ["vulcan-sx244b.png"],
     },
     {
       id: 160,
@@ -8223,7 +8223,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-SX366B.png"],
+      images: ["vulcan-sx366b.png"],
     },
     {
       id: 161,
@@ -8274,7 +8274,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-SX366B.png"],
+      images: ["vulcan-sx366b.png"],
     },
     {
       id: 162,
@@ -8325,7 +8325,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-SX6010B.png"],
+      images: ["vulcan-sx6010b.png"],
     },
     {
       id: 163,
@@ -8376,7 +8376,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-SX6010B.png"],
+      images: ["vulcan-sx6010b.png"],
     },
     {
       id: 164,
@@ -8428,7 +8428,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36RB.png"],
+      images: ["vulcan-36rb.png"],
     },
     {
       id: 165,
@@ -8480,7 +8480,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36RB.png"],
+      images: ["vulcan-36rb.png"],
     },
     {
       id: 166,
@@ -8532,7 +8532,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36RB.png"],
+      images: ["vulcan-36rb.png"],
     },
     {
       id: 167,
@@ -8584,7 +8584,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36RB.png"],
+      images: ["vulcan-36rb.png"],
     },
     {
       id: 168,
@@ -8635,7 +8635,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VSP100.png"],
+      images: ["vulcan-vsp100.png"],
     },
     {
       id: 169,
@@ -8686,7 +8686,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VSP100.png"],
+      images: ["vulcan-vsp100.png"],
     },
     {
       id: 170,
@@ -8737,7 +8737,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VSP200F.png"],
+      images: ["vulcan-vsp200f.png"],
     },
     {
       id: 171,
@@ -8788,7 +8788,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VSP200F.png"],
+      images: ["vulcan-vsp200f.png"],
     },
     {
       id: 172,
@@ -8840,7 +8840,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VC4GD.png"],
+      images: ["vulcan-vc4gd.png"],
     },
     {
       id: 173,
@@ -8892,7 +8892,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VC44GD.png"],
+      images: ["vulcan-vc44gd.png"],
     },
     {
       id: 174,
@@ -8944,7 +8944,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VC4GD.png"],
+      images: ["vulcan-vc4gd.png"],
     },
     {
       id: 175,
@@ -8996,7 +8996,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VC44GD.png"],
+      images: ["vulcan-vc44gd.png"],
     },
     {
       id: 176,
@@ -9048,7 +9048,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VC5GD.png"],
+      images: ["vulcan-vc5gd.png"],
     },
     {
       id: 177,
@@ -9100,7 +9100,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VC55GD.png"],
+      images: ["vulcan-vc55gd.png"],
     },
     {
       id: 178,
@@ -9152,7 +9152,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VC5GD.png"],
+      images: ["vulcan-vc5gd.png"],
     },
     {
       id: 179,
@@ -9204,7 +9204,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VC5GD.png"],
+      images: ["vulcan-vc5gd.png"],
     },
     {
       id: 180,
@@ -9256,7 +9256,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-MINI-JET.png"],
+      images: ["vulcan-mini-jet.png"],
     },
     {
       id: 181,
@@ -9308,7 +9308,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-ABC7.png"],
+      images: ["vulcan-abc7.png"],
     },
     {
       id: 182,
@@ -9360,7 +9360,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-ABC7.png"],
+      images: ["vulcan-abc7.png"],
     },
     {
       id: 183,
@@ -9412,7 +9412,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-ABC7.png"],
+      images: ["vulcan-abc7.png"],
     },
     {
       id: 184,
@@ -9464,7 +9464,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-ABC7.png"],
+      images: ["vulcan-abc7.png"],
     },
     {
       id: 185,
@@ -9516,7 +9516,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-C24EA5PS.png"],
+      images: ["vulcan-c24ea5ps.png"],
     },
     {
       id: 186,
@@ -9568,7 +9568,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-C24EA5PS.png"],
+      images: ["vulcan-c24ea5ps.png"],
     },
     {
       id: 187,
@@ -9620,7 +9620,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-C24EA5LWE.png"],
+      images: ["vulcan-c24ea5lwe.png"],
     },
     {
       id: 188,
@@ -9672,7 +9672,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-C24EA5LWE.png"],
+      images: ["vulcan-c24ea5lwe.png"],
     },
     {
       id: 189,
@@ -9724,7 +9724,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-C24EA5PLUS.png"],
+      images: ["vulcan-c24ea5plus.png"],
     },
     {
       id: 190,
@@ -9776,7 +9776,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-C24EA5PLUS.png"],
+      images: ["vulcan-c24ea5plus.png"],
     },
     {
       id: 191,
@@ -9827,7 +9827,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40DL.png"],
+      images: ["vulcan-k40dl.png"],
     },
     {
       id: 192,
@@ -9878,7 +9878,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40DL.png"],
+      images: ["vulcan-k40dl.png"],
     },
     {
       id: 193,
@@ -9929,7 +9929,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40DL.png"],
+      images: ["vulcan-k40dl.png"],
     },
     {
       id: 194,
@@ -9980,7 +9980,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40DLT.png"],
+      images: ["vulcan-k40dlt.png"],
     },
     {
       id: 195,
@@ -10031,7 +10031,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40DLT.png"],
+      images: ["vulcan-k40dlt.png"],
     },
     {
       id: 196,
@@ -10082,7 +10082,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40DLT.png"],
+      images: ["vulcan-k40dlt.png"],
     },
     {
       id: 197,
@@ -10134,7 +10134,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40GL.png"],
+      images: ["vulcan-k40gl.png"],
     },
     {
       id: 198,
@@ -10186,7 +10186,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40GL.png"],
+      images: ["vulcan-k40gl.png"],
     },
     {
       id: 199,
@@ -10238,7 +10238,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40GL.png"],
+      images: ["vulcan-k40gl.png"],
     },
     {
       id: 200,
@@ -10290,7 +10290,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40GLT.png"],
+      images: ["vulcan-k40glt.png"],
     },
     {
       id: 201,
@@ -10342,7 +10342,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40GLT.png"],
+      images: ["vulcan-k40glt.png"],
     },
     {
       id: 202,
@@ -10394,7 +10394,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40GLT.png"],
+      images: ["vulcan-k40glt.png"],
     },
     {
       id: 203,
@@ -10446,7 +10446,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40EL.png"],
+      images: ["vulcan-k40el.png"],
     },
     {
       id: 204,
@@ -10498,7 +10498,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40EL.png"],
+      images: ["vulcan-k40el.png"],
     },
     {
       id: 205,
@@ -10550,7 +10550,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40EL.png"],
+      images: ["vulcan-k40el.png"],
     },
     {
       id: 206,
@@ -10602,7 +10602,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40ELT.png"],
+      images: ["vulcan-k40elt.png"],
     },
     {
       id: 207,
@@ -10654,7 +10654,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40ELT.png"],
+      images: ["vulcan-k40elt.png"],
     },
     {
       id: 208,
@@ -10706,7 +10706,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-K40ELT.png"],
+      images: ["vulcan-k40elt.png"],
     },
     {
       id: 209,
@@ -10758,7 +10758,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM6.png"],
+      images: ["vulcan-tcm6.png"],
     },
     {
       id: 210,
@@ -10810,7 +10810,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM6.png"],
+      images: ["vulcan-tcm6.png"],
     },
     {
       id: 211,
@@ -10862,7 +10862,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM101.png"],
+      images: ["vulcan-tcm101.png"],
     },
     {
       id: 212,
@@ -10914,7 +10914,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM101.png"],
+      images: ["vulcan-tcm101.png"],
     },
     {
       id: 213,
@@ -10966,7 +10966,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM102.png"],
+      images: ["vulcan-tcm102.png"],
     },
     {
       id: 214,
@@ -11018,7 +11018,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM102.png"],
+      images: ["vulcan-tcm102.png"],
     },
     {
       id: 215,
@@ -11070,7 +11070,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM102.png"],
+      images: ["vulcan-tcm102.png"],
     },
     {
       id: 216,
@@ -11122,7 +11122,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM102.png"],
+      images: ["vulcan-tcm102.png"],
     },
     {
       id: 217,
@@ -11173,7 +11173,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VP18.png"],
+      images: ["vulcan-vp18.png"],
     },
     {
       id: 218,
@@ -11225,7 +11225,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36ESB.png"],
+      images: ["vulcan-36esb.png"],
     },
     {
       id: 219,
@@ -11277,7 +11277,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36ESB.png"],
+      images: ["vulcan-36esb.png"],
     },
     {
       id: 220,
@@ -11329,7 +11329,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-36ESB.png"],
+      images: ["vulcan-36esb.png"],
     },
     {
       id: 221,
@@ -11380,7 +11380,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VICM24.png"],
+      images: ["vulcan-vicm24.png"],
     },
     {
       id: 222,
@@ -11431,7 +11431,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VICM36.png"],
+      images: ["vulcan-vicm36.png"],
     },
     {
       id: 223,
@@ -11482,7 +11482,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VICM48.png"],
+      images: ["vulcan-vicm48.png"],
     },
     {
       id: 224,
@@ -11533,7 +11533,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VICM60.png"],
+      images: ["vulcan-vicm60.png"],
     },
     {
       id: 225,
@@ -11584,7 +11584,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VICM72.png"],
+      images: ["vulcan-vicm72.png"],
     },
     {
       id: 226,
@@ -11635,7 +11635,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1024C.png"],
+      images: ["vulcan-1024c.png"],
     },
     {
       id: 227,
@@ -11686,7 +11686,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1036C.png"],
+      images: ["vulcan-1036c.png"],
     },
     {
       id: 228,
@@ -11737,7 +11737,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1048C.png"],
+      images: ["vulcan-1048c.png"],
     },
     {
       id: 229,
@@ -11788,7 +11788,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1024W.png"],
+      images: ["vulcan-1024w.png"],
     },
     {
       id: 230,
@@ -11839,7 +11839,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1024W.png"],
+      images: ["vulcan-1024w.png"],
     },
     {
       id: 231,
@@ -11890,7 +11890,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-1024W.png"],
+      images: ["vulcan-1024w.png"],
     },
     {
       id: 232,
@@ -11941,7 +11941,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VIR2.png"],
+      images: ["vulcan-vir2.png"],
     },
     {
       id: 233,
@@ -11992,7 +11992,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VIR2.png"],
+      images: ["vulcan-vir2.png"],
     },
     {
       id: 234,
@@ -12043,7 +12043,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VIR2.png"],
+      images: ["vulcan-vir2.png"],
     },
     {
       id: 235,
@@ -12094,7 +12094,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VIR2.png"],
+      images: ["vulcan-vir2.png"],
     },
     {
       id: 236,
@@ -12145,7 +12145,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VST3B.png"],
+      images: ["vulcan-vst3b.png"],
     },
     {
       id: 237,
@@ -12196,7 +12196,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VST3B.png"],
+      images: ["vulcan-vst3b.png"],
     },
     {
       id: 238,
@@ -12247,7 +12247,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Ecomax-FGC100.png"],
+      images: ["ecomax-fgc100.png"],
     },
     {
       id: 239,
@@ -12298,7 +12298,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Ecomax-FGC100.png"],
+      images: ["ecomax-fgc100.png"],
     },
     {
       id: 240,
@@ -12348,7 +12348,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-OVNRACKSX-1C.png"],
+      images: ["vulcan-ovnracksx-1c.png"],
     },
     {
       id: 241,
@@ -12398,7 +12398,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-OVNRACKSX-1C.png"],
+      images: ["vulcan-ovnracksx-1c.png"],
     },
     {
       id: 242,
@@ -12448,7 +12448,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-RACK-1PCNEW.png"],
+      images: ["vulcan-rack-1pcnew.png"],
     },
     {
       id: 243,
@@ -12498,7 +12498,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-OVNRACKSX-1C.png"],
+      images: ["vulcan-ovnracksx-1c.png"],
     },
     {
       id: 244,
@@ -12549,7 +12549,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-OVNRACK-XL20.png"],
+      images: ["vulcan-ovnrack-xl20.png"],
     },
     {
       id: 245,
@@ -12600,7 +12600,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-OVNRACK-XL20.png"],
+      images: ["vulcan-ovnrack-xl20.png"],
     },
     {
       id: 246,
@@ -12651,7 +12651,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-ADDRACK-ABC1.png"],
+      images: ["vulcan-addrack-abc1.png"],
     },
     {
       id: 247,
@@ -12702,7 +12702,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-ADDRACK-ABC1.png"],
+      images: ["vulcan-addrack-abc1.png"],
     },
     {
       id: 248,
@@ -12753,7 +12753,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM-RACK61.png"],
+      images: ["vulcan-tcm-rack61.png"],
     },
     {
       id: 249,
@@ -12804,7 +12804,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM-RACK61.png"],
+      images: ["vulcan-tcm-rack61.png"],
     },
     {
       id: 250,
@@ -12855,7 +12855,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-TCM-RACK102.png"],
+      images: ["vulcan-tcm-rack102.png"],
     },
     {
       id: 251,
@@ -12906,7 +12906,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-CASTERS-RR4.png"],
+      images: ["vulcan-casters-rr4.png"],
     },
     {
       id: 252,
@@ -12957,7 +12957,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Hobart-CB30K-SYSTEM.png"],
+      images: ["hobart-cb30k-system.png"],
     },
     {
       id: 253,
@@ -13008,7 +13008,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Hobart-CB30K-PMKIT.png"],
+      images: ["hobart-cb30k-pmkit.png"],
     },
     {
       id: 254,
@@ -13059,7 +13059,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP7.png"],
+      images: ["vulcan-vhp7.png"],
     },
     {
       id: 255,
@@ -13110,7 +13110,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VHP15.png"],
+      images: ["vulcan-vhp15.png"],
     },
     {
       id: 256,
@@ -13161,7 +13161,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VBP18ES.png"],
+      images: ["vulcan-vbp18es.png"],
     },
     {
       id: 257,
@@ -13212,7 +13212,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VBP7ES.png"],
+      images: ["vulcan-vbp7es.png"],
     },
     {
       id: 258,
@@ -13263,7 +13263,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VPT18.png"],
+      images: ["vulcan-vpt18.png"],
     },
     {
       id: 259,
@@ -13314,7 +13314,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VW1S.png"],
+      images: ["vulcan-vw1s.png"],
     },
     {
       id: 260,
@@ -13365,7 +13365,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VW2S.png"],
+      images: ["vulcan-vw2s.png"],
     },
     {
       id: 261,
@@ -13416,7 +13416,7 @@ const data = {
       discountDollar: 0.0,
       commissionPercentage: 0.0,
       fixedCommission: 0.0,
-      images: ["Vulcan-VW3S.png"],
+      images: ["vulcan-vw3s.png"],
     },
   ],
 };
