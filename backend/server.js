@@ -23,13 +23,16 @@ connect
 // there is also a GUI you can install from mongodb known as 'compass'
 
 const app = express();
+
+app.use(express.json()); //converts to json
+app.use(express.urlencoded({ extended: true }));
 //now we grab the data from GRSInvetoryData which will be store according to seedRoutes.jsx
 app.use("/api/seed", seedRouter); //this grabs the data from the server that holds the data which is located at 'localhost:/api/seed'
 app.use("/api/products", productRouter);
 app.use("/api/users", userRouter);
 
-app.user((err, req, res, next) => {
-  res.status(500).send({ message: err.message });
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message + " <= errorMessageHere" });
 });
 
 const port = process.env.PORT || 5000;

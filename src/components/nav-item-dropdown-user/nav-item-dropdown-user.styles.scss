@@ -1,8 +1,8 @@
-.dropdown {
+.dropdown-user {
   // display: flex;
   position: absolute;
   top: 58px;
-  right: 50%;
+  right: 10%;
   width: 250px;
   transform: translateX(-91%, 1%);
   border-radius: 5px;
@@ -24,18 +24,18 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.dropdown::-webkit-scrollbar {
+.dropdown-user::-webkit-scrollbar {
   width: 8px; /* width of the entire scrollbar */
   border-radius: 5px;
 }
 
-.dropdown::-webkit-scrollbar-track {
+.dropdown-user::-webkit-scrollbar-track {
   // background: #ddd;        /* color of the tracking area */
   border-radius: 5px;
   margin-left: 10px;
 }
 
-.dropdown::-webkit-scrollbar-thumb {
+.dropdown-user::-webkit-scrollbar-thumb {
   background-color: #ddd; /* color of the scroll thumb */
   border-radius: 50px; /* roundness of the scroll thumb */
   border: 4px solid #ddd; /* creates padding around scroll thumb */

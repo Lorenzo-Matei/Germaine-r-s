@@ -8,6 +8,10 @@ import {
   Collapse,
   Card,
   Badge,
+  DropdownMenu,
+  Dropdown,
+  DropdownToggle,
+  DropdownItem,
 } from "shards-react";
 
 import {
@@ -24,14 +28,16 @@ import "./navbar-floating.styles.scss";
 import ExpandingSearchBox from "../expanding-search-box/expanding-search-box.component";
 import Logo from "../../assets/images/misc/store_logo.png";
 import NewArrivalItem from "../new-arrivals/new-arrivals-item.component";
-import NavItemDropdown from "../NavItemDropdown/nav-item-dropdown.component";
-import NavDropdownMenu from "../nav-dropdown-menu/nav-dropdown-menu.component";
+import NavItemDropdown from "../NavItemDropdown/nav-item-dropdown.component.jsx";
+import NavDropdownMenu from "../nav-dropdown-menu/nav-dropdown-menu.component.jsx";
 import { Link } from "react-router-dom";
 import { Store } from "../../Store";
+import NavDropdownUser from "../nav-dropdown-user/nav-dropdown-user.component";
+import NavItemDropdownUser from "../nav-item-dropdown-user/nav-item-dropdown-user.component";
 
 const NavBarFloating = () => {
   const { state } = useContext(Store); //copied from product-page and removed dispatch as changes wont occur here
-  const { cart } = state;
+  const { cart, userInfo } = state;
 
   // const toggleDropdown = toggleDropdown.bind();
   // const toggleNavbar = toggleNavbar.bind();
@@ -46,6 +52,11 @@ const NavBarFloating = () => {
   function toggleNavbar() {
     setCollapseOpen(!collapseOpen);
   }
+
+  const [openProfileDropdown, setOpenProfileDropdown] = useState();
+  const toggleProfileDropDown = () => {
+    setOpenProfileDropdown((open) => !open);
+  };
 
   return (
     <div className="navbar-div">
@@ -111,7 +122,11 @@ const NavBarFloating = () => {
                 </Link>
               </NavItem>
 
-              <NavItem>
+              {userInfo ? (
+                <NavItemDropdownUser>
+                  <NavDropdownUser />
+                </NavItemDropdownUser>
+              ) : (
                 <Link to="sign-in">
                   <button
                     type="button"
@@ -121,7 +136,10 @@ const NavBarFloating = () => {
                     Sign In
                   </button>
                 </Link>
-              </NavItem>
+              )}
+              {/* // functional statement on what to do if user is logged in and
+                when they arent. */}
+              {/* </NavItem> */}
 
               <NavItem>
                 <Link to="/cart">
@@ -131,7 +149,7 @@ const NavBarFloating = () => {
                   >
                     <FaShoppingCart className="button-icon" />
                     {cart.cartItems.length > 0 && ( //if carts items in context exists and is great than 0 items
-                      <Badge id="badge-cart-num" outline theme="danger">
+                      <Badge id="badge-cart-num" outline theme="success">
                         {cart.cartItems.reduce(
                           // this ensures that no duplicates are created, only increases the quantity of that item
                           (accumulator, currentItem) =>

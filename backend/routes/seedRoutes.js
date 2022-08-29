@@ -11,14 +11,13 @@ const seedRouter = express.Router(); // creates a object from express.Router
 seedRouter.get("/", async (req, res) => {
   // first we need to remove previous records of products and create a blank object
   await Product.deleteMany({}); // empty object '{}' means return all models within Product
-
   // all products will come from productData.jsx
   const createdProducts = await Product.insertMany(data.testProducts);
   // first we need to remove previous records of products and create a blank object
-  await User.deleteMany({}); // empty object '{}' means return all models within Product
 
-  // all products will come from productData.jsx
+  await User.deleteMany({}); // empty object '{}' means return all models within Product
   const createdUsers = await User.insertMany(userData.users);
+
   res.send({ createdProducts, createdUsers }); //this sends products to the front end
 });
 

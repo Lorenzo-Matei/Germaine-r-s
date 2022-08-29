@@ -7,6 +7,9 @@ import {
   Routes,
 } from "react-router-dom";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
+
 //Autoquotes
 //Reach out by email or phone to inquire about API usage.
 
@@ -36,6 +39,11 @@ const App = () => {
         backgroundPosition: "center",
       }}
     >
+      <ToastContainer
+        position="bottom-center"
+        limit={1}
+        style={{ color: "#121212" }}
+      />
       <Router>
         <NavbarFloating />
         <Routes>

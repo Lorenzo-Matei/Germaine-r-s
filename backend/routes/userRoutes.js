@@ -1,6 +1,6 @@
 import express from "express";
-import User from "../models/userModel";
-import { generateToken } from "../utils";
+import User from "../models/userModel.js";
+import { generateToken } from "../utils.js";
 import expressAsyncHandler from "express-async-handler";
 import bcrypt from "bcryptjs";
 
@@ -21,7 +21,7 @@ userRouter.post(
         // second password is the one in db
 
         //if the info checks out then all the info is sent back to the user
-        req.send({
+        res.send({
           _id: user._id,
           name: user.name,
           email: user.email,
@@ -30,8 +30,8 @@ userRouter.post(
         });
         return; //this stop the script running after having sent the data
       }
-      res.status(401).send({ message: "Invalid email or password" });
     }
+    res.status(401).send({ message: "Invalid email or password" });
   })
 );
 export default userRouter;

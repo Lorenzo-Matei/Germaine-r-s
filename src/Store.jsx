@@ -3,6 +3,10 @@ import { createContext, useReducer } from "react";
 export const Store = createContext();
 
 const initialState = {
+  userInfo: localStorage.getItem("userInfo")
+    ? JSON.parse(localStorage.getItem("userInfo"))
+    : null,
+
   cart: {
     cartItems: localStorage.getItem("cartItems") //if cart items exists in the localstorage
       ? JSON.parse(localStorage.getItem("cartItems")) //use JSON.parse to convert local storage cartITems(which are string rn) into javacript object (aka json)
@@ -35,6 +39,15 @@ function reducer(state, action) {
       localStorage.setItem("cartItems", JSON.stringify(cartItems)); // cart items are converted to a string and saved in the cartItems variable which is then saved on the devices local storage.
       return { ...state, cart: { ...state.cart, cartItems } };
     }
+
+    case "USER_SIGNIN":
+      return { ...state, userInfo: action.payload };
+
+    case "USER_SIGNOUT":
+      return {
+        ...state,
+        userInfo: null,
+      };
 
     default:
       return state;
