@@ -24,6 +24,8 @@ import {
   FaUserAstronaut,
 } from "react-icons/fa";
 
+import { IoStorefrontSharp } from "react-icons/io5";
+
 import "./navbar-floating.styles.scss";
 import ExpandingSearchBox from "../expanding-search-box/expanding-search-box.component";
 import Logo from "../../assets/images/misc/store_logo.png";
@@ -88,7 +90,7 @@ const NavBarFloating = () => {
                     type="button"
                     class="btn btn-outline-light btn-pill nav-btn"
                   >
-                    <FaHome className="button-icon" />
+                    <IoStorefrontSharp className="button-icon" />
                     Products
                   </button>
                 </Link>
@@ -164,9 +166,7 @@ const NavBarFloating = () => {
               </NavItem>
 
               <NavItem className="nav-item">
-                <Link to="/search">
-                  <ExpandingSearchBox />
-                </Link>
+                <ExpandingSearchBox />
               </NavItem>
             </Nav>
           </Collapse>

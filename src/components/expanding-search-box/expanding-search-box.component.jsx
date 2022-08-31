@@ -21,11 +21,15 @@ function ExpandingSearchBox() {
         aria-label="search"
         placeholder="Search Products Here!"
         onChange={(e) => setQuery(e.target.value)}
+        // onSubmit={submitHandler} 
       />
+
       <button
+        type="submit"
         class="search__submit"
         aria-label="submit search"
         id="button-search"
+        onClick={submitHandler}
       >
         <FaSearch className="fa-search" />
       </button>

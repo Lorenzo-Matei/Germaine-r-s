@@ -18,6 +18,9 @@ import "./cart-page.styles.scss";
 import axios from "axios";
 import ProductPage from "../product-page/product-page.component";
 
+const cloudFrontDistributionDomain =
+  "https://dem6epkjrbcxz.cloudfront.net/test-products-images-nobg/";
+
 const CartPage = () => {
   const navigate = useNavigate();
   const { state, dispatch: ctxdispatch } = useContext(Store); //this will access to store and variables in cart from the backend
@@ -52,6 +55,14 @@ const CartPage = () => {
     navigate("/sign-in?redirect=/shipping");
   };
 
+  function displayVoltage(voltage) {
+    if (voltage !== "") {
+      return " and " + voltage + "V";
+    } else {
+      return "";
+    }
+  }
+
   // const productFullName =
   //   item.productBrand +
   //   " " +
@@ -85,12 +96,15 @@ const CartPage = () => {
               {cartItems.map((item) => (
                 <ListGroupItem key={item._id} className="cart-page-cart-item">
                   <Row className="align-items-center">
-                    <Col md={4}>
+                    <Col md={2}>
                       <img
-                        src={item.image}
-                        alt={item.image}
+                        src={cloudFrontDistributionDomain + item.images[0]}
+                        alt={item.images[0]}
                         className="img-fluid rounded img-thumbnail"
                       ></img>{" "}
+                    </Col>
+
+                    <Col md={2}>
                       {/*  {" "} -> this creates a space between elements */}
                       <Link
                         id="cart-page-item-name"
@@ -102,7 +116,8 @@ const CartPage = () => {
                           " " +
                           item.modelVariant +
                           " " +
-                          item.gasType}
+                          item.gasType +
+                          displayVoltage(item.voltage)}
                       </Link>
                     </Col>
                     <Col md={3}>
@@ -142,8 +157,10 @@ const CartPage = () => {
                       </Button>
                     </Col>
 
-                    <Col md={2}>
-                      <h3 className="cart-page-price">$ {item.onlinePrice}</h3>
+                    <Col md={4}>
+                      <h3 className="cart-page-price">
+                        $ {item.onlinePrice[0].toFixed(2)}
+                      </h3>
                     </Col>
                     <Col md={1}>
                       <Button // trash item button
@@ -181,7 +198,8 @@ const CartPage = () => {
                   $
                   {cartItems.reduce(
                     (accumulator, cart) =>
-                      accumulator + cart.price * cart.quantity,
+                      accumulator +
+                      cart.onlinePrice[0].toFixed(2) * cart.quantity,
                     0
                   )}
                 </h4>
@@ -193,7 +211,8 @@ const CartPage = () => {
                   {cartItems.reduce(
                     (accumulator, cart) =>
                       +(
-                        (accumulator + cart.price * cart.quantity) *
+                        (accumulator +
+                          cart.onlinePrice[0].toFixed(2) * cart.quantity) *
                         0.13
                       ).toFixed(2),
                     0
@@ -207,7 +226,8 @@ const CartPage = () => {
                   {cartItems.reduce(
                     (accumulator, cart) =>
                       +(
-                        (accumulator + cart.price * cart.quantity) *
+                        (accumulator +
+                          cart.onlinePrice[0].toFixed(2) * cart.quantity) *
                         1.13
                       ).toFixed(2),
                     0
@@ -222,9 +242,11 @@ const CartPage = () => {
                     type="button"
                     theme="success"
                     onClick={checkoutHandler}
-                    disabled={cartItems.length === 0} //if no items in cart, button doesnt work
+                    // disabled={cartItems.length === 0} //if no items in cart, button doesnt work
+                    disabled
                   >
-                    Proceed to Checkout
+                    Call To Place Order
+                    {/* Proceed to Checkout */}
                   </Button>
                 </div>
               </ListGroupItem>

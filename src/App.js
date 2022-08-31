@@ -27,6 +27,8 @@ import CartPage from "./pages/cart/cart-page.component";
 import ProductSearchPage from "./pages/products-search/products-search-page.component";
 import Footer from "./components/footer/footer.component";
 import ProductPage from "./pages/product-page/product-page.component";
+import { Alert } from "shards-react";
+import { AiFillWarning } from "react-icons/ai";
 
 const App = () => {
   return (
@@ -46,6 +48,13 @@ const App = () => {
       />
       <Router>
         <NavbarFloating />
+        <Alert theme="danger" className="maintenance-alert">
+          <AiFillWarning />
+          {"  "} Our Site is under maintenance and many features will be
+          unavailable. Please click "Products" above to view our selection. For
+          now call for Orders.{"  "}
+          <AiFillWarning />
+        </Alert>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductSearchPage />} />

@@ -5,7 +5,10 @@ import { Button } from "shards-react";
 import { BsFilterCircle } from "react-icons/bs";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import LoadingPageAnimation from "../../components/loading-page-animation/loading-page-animation.component";
-import { Carousel } from "react-carousel-minimal";
+// import ReactPaginate from "react-paginate";
+// import "bootstrap/dist/css/bootstrap.css";
+import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
+import ReactPaginate from "react-paginate";
 
 import ProductSearchFilters from "../../components/product-search-filters/product-search-filters.component";
 import ProductSearchItem from "../../components/product-search-item/product-search-item.component";
@@ -15,6 +18,34 @@ import "./products-search-page.styles.scss";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
 import ErrorMessageBox from "../../components/error-message-box/error-message-box.component";
+import { useLocation, useNavigate } from "react-router-dom";
+import { getError } from "../../util";
+import { toast } from "react-toastify";
+
+function getBrandLogo(cloudFront, brand) {
+  brand = brand.toLowerCase();
+
+  switch (brand) {
+    case "blodgett":
+      return cloudFront + "blodgett.png";
+
+    case "ecomax":
+      return cloudFront + "ecomax.png";
+
+    case "hobart":
+      return cloudFront + "hobart.png";
+
+    case "vulcan":
+      return cloudFront + "vulcan.png";
+
+    case "winco":
+      return cloudFront + "winco.png";
+
+    case "wusthof":
+      return "/assets/images/logos/wusthof.png";
+  }
+}
+const changeIcon = (icon) => icon.classList.toggle(<IoIosCloseCircleOutline />);
 
 const ACTIONS = {
   FETCH_REQUEST: "FETCH_REQUEST",
@@ -36,6 +67,29 @@ const reducer = (state, action) => {
   }
 };
 
+//disabled as this is used for filters
+// const searchReducer = (state, action) => {
+//   switch (action.type) {
+//     case "FETCH_REQUEST":
+//       return { ...state, loading: true };
+
+//     case "FETCH_SUCCESS":
+//       return {
+//         ...state,
+//         products: action.payload.products,
+//         page: action.payload.page,
+//         pages: action.payload.pages,
+//         countProducts: action.payload.countProducts,
+//         loading: false,
+//       };
+//     case "FETCH_FAIL":
+//       return { ...state, loading: false, error: action.payload };
+
+//     default:
+//       return state;
+//   }
+// };
+
 function getFiles() {
   // const files = [];
   const files = process.env.PUBLIC_URL + "/products";
@@ -45,8 +99,18 @@ function getFiles() {
 const ProductSearchPage = () => {
   // const[filterMenuWidth, setFilterMenuWidth] = useState('3px');
   const [showFilterMenu, setShowFilterMenu] = useState(false);
-  const [filterMenuWidth, setFilterMenuWidth] = useState(null);
+  const [filterMenuWidth, setFilterMenuWidth] = useState(0);
   const searchFilterRef = useRef(null);
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const PER_PAGE = 16;
+  const offset = currentPage * PER_PAGE;
+  // const pageCount = Math.ceil(productsData.length / PER_PAGE);
+
+  // const currentPageData = productsData
+  //   .slice(offset, offset + PER_PAGE)
+  //   .map(({ thumburl }) => <img src={thumburl} />);
+  // const pageCount = Math.ceil(data.length / PER_PAGE);
 
   // const { state } = useContext(Store); //copied from product-page and removed dispatch as changes wont occur here
   // const { cart } = state;
@@ -81,6 +145,7 @@ const ProductSearchPage = () => {
           type: ACTIONS.FETCH_SUCCESS,
           payload: result.data,
         });
+        window.scrollTo(0, 0);
       } catch (err) {
         dispatch({
           type: ACTIONS.FETCH_FAIL,
@@ -88,38 +153,139 @@ const ProductSearchPage = () => {
         });
       }
     };
+    fetchData();
+  }, []);
+  // this secion is used for filters
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const { data } = await axios.get(
+  //         `/api/products/search?page=${page}&query=${query}&category=${category}&subCategory=${subCategory}&microCategory=${microCategory}&brand=${brand}&gasType=${gasType}&price=${price}&rating=${rating}&order=${order}`
+  //       );
+  //     } catch (err) {
+  //       dispatch({
+  //         type: "FETCH_FAIL",
+  //         payload: getError(error),
+  //       });
+  //     }
+  //   };
+  //   fetchData();
+  // }, [
+  //   page,
+  //   query,
+  //   category,
+  //   subCategory,
+  //   microCategory,
+  //   brand,
+  //   gasType,
+  //   price,
+  //   rating,
+  //   order,
+  // ]);
 
-    // setProducts(result.data); // sets state for products by grabbing 'data' from backend with the 'result' function
+  // const [categories, setCategories] = useState([]);
+  // useEffect(() => {
+  //   const fetchCategories = async () => {
+  //     try {
+  //       const { data } = await axios.get(`/api/products/categories`);
+  //       setCategories(data);
+  //     } catch (err) {
+  //       toast.error(getError(err));
+  //     }
+  //   };
+  //   fetchCategories();
+  // }, [dispatch]);
 
-    fetchData(); //now that we've define fetchData function we call it within the useEffect.
-  }, []); // 2nd parameter - after the , - specifies when to to do it, in this case its after the first render and only do it once.
-  // therefore useEffect will run this function after the 1st render of this component
+  // const getFilterUrl = (filter) => {
+  //   const filterPage = filter.page || page;
+  //   const filterQuery = filter.query || query;
+  //   const filterCategory = filter.category || category;
+  //   const filterSubCategory = filter.subCategory || subCategory;
+  //   const filterBrand = filter.brand || brand;
+  //   const filterGasType = filter.gasType || gasType;
+  //   const filterRating = filter.rating || rating;
+  //   const filterPrice = filter.price || price;
+  //   const sortOrder = filter.order || order;
 
-  function getBrandLogo(brand) {
-    brand = brand.toLowerCase();
+  //   return `/search?category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`;
+  // };
 
-    switch (brand) {
-      case "blodgett":
-        return "/assets/images/logos/winco.png";
+  ///////////////////////////////////////////  old useEffect /////////////////////////////
+  // useEffect(() => {
+  //   //this hook does something everytime something rerenders -> ex. use types something/ click someting
+  //   const fetchData = async () => {
+  //     //this is a async functinon that grabs products from backend
 
-      case "ecomax":
-        return "/assets/images/logos/ecomax.png";
+  //     dispatch({ type: ACTIONS.FETCH_REQUEST });
 
-      case "hobart":
-        return "/assets/images/logos/hobart.png";
+  //     try {
+  //       //old
+  //       const result = await axios.get("/api/products"); //sends ajax request to the address specified- api
+  //       // this is address used in server.js
+  //       // const result = await axios.get("/api/products"); //sends ajax request to the address specified- api
 
-      case "vulcan":
-        return "/assets/images/logos/vulcan.png";
+  //       dispatch({
+  //         type: ACTIONS.FETCH_SUCCESS,
+  //         payload: result.data,
+  //       });
+  //     } catch (err) {
+  //       dispatch({
+  //         type: ACTIONS.FETCH_FAIL,
+  //         payload: err.message,
+  //       });
+  //     }
+  //   };
 
-      case "winco":
-        return "/assets/images/logos/winco.png";
+  //   // setProducts(result.data); // sets state for products by grabbing 'data' from backend with the 'result' function
 
-      case "wusthof":
-        return "/assets/images/logos/wusthof.png";
+  //   fetchData(); //now that we've define fetchData function we call it within the useEffect.
+  // }, []); // 2nd parameter - after the , - specifies when to to do it, in this case its after the first render and only do it once.
+  // // therefore useEffect will run this function after the 1st render of this component
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // const navigate = useNavigate();
+  // const { search } = useLocation();
+  // const sp = new URLSearchParams(search); // search?category='insertCategoryHere'
+
+  // const query = sp.get("query") || "all";
+
+  // const category = sp.get("productCategory") || "all";
+  // const subCategory = sp.get("productSubCategory") || "all";
+  // const microCategory = sp.get("productMicroCategory") || "all";
+
+  // const gasType = sp.get("gasType") || "all";
+  // const brand = sp.get("productBrand") || "all";
+  // const price = sp.get("price") || "all";
+  // const rating = sp.get("rating") || "all";
+  // const order = sp.get("order") || "all";
+  // const page = sp.get("page") || "1";
+
+  // const [{ loading, error, productsData, pages, countProducts }, dispatch] =
+  //   useReducer(searchReducer, {
+  //     loading: true,
+  //     error: "",
+  //   });
+
+  // ** gotta get props through to filters component
+  function handlePageClick({ selected: selectedPage }) {
+    setCurrentPage(selectedPage);
+    window.scrollTo(0, 200);
+  }
+
+  function displayVoltage(voltage) {
+    if (voltage !== "") {
+      return " and " + voltage + "V";
+    } else {
+      return "";
     }
   }
-  const changeIcon = (icon) =>
-    icon.classList.toggle(<IoIosCloseCircleOutline />);
+
+  const pageCount = Math.ceil(productsData.length / PER_PAGE);
+  const cloudFrontDistributionInventoryDomain =
+    "https://dem6epkjrbcxz.cloudfront.net/test-products-images-nobg/";
+
+  const cloudFrontDistributionLogosDomain =
+    "https://dem6epkjrbcxz.cloudfront.net/logos/";
 
   return (
     <div className="product-search-container">
@@ -165,7 +331,7 @@ const ProductSearchPage = () => {
             ) : (
               (getFiles(),
               // otherwise show products
-              productsData.slice(50, 65).map((product) => (
+              productsData.slice(offset, offset + PER_PAGE).map((product) => (
                 <ProductSearchItem
                   key={product.slug}
                   _id={product._id}
@@ -178,14 +344,18 @@ const ProductSearchPage = () => {
                     product.modelVariant +
                     " " +
                     product.gasType +
-                    " " +
-                    product.voltage + // need to create if statement for energy in name Gas and electric etc
-                    "V"
+                    displayVoltage(product.voltage)
                   }
                   brand={product.productBrand}
-                  brandLogo={getBrandLogo(product.productBrand)}
+                  brandLogo={getBrandLogo(
+                    cloudFrontDistributionLogosDomain,
+                    product.productBrand
+                  )}
                   // image={product.image}
-                  image={`/assets/images/test-products-images-nobg/${product.images[0]}`}
+                  // image={`/assets/images/test-products-images-nobg/${product.images[0]}`}
+                  image={
+                    cloudFrontDistributionInventoryDomain + product.images[0]
+                  }
                   // rating={product.rating}
                   price={product.onlinePrice[0]}
                   gasType={product.gasType}
@@ -195,6 +365,30 @@ const ProductSearchPage = () => {
             )}
           </div>
         </div>
+      </div>
+      <div className="search-page-pagination-container">
+        <ReactPaginate
+          previousLabel={"← Previous"}
+          nextLabel={"Next →"}
+          pageCount={pageCount}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination"}
+          previousLinkClassName={"pagination__link"}
+          nextLinkClassName={"pagination__link"}
+          disabledClassName={"pagination__link--disabled"}
+          activeClassName={"pagination__link--active"}
+        />
+        {/* <ReactPaginate
+          className="search-page-pagination-component"
+          id="container"
+          breakLabel="..."
+          nextLabel="next >"
+          // onPageChange=
+          pageRangeDisplayed={5}
+          pageCount={10}
+          previousLabel="< previous"
+          renderOnZeroPageCount={null}
+        /> */}
       </div>
     </div>
   );

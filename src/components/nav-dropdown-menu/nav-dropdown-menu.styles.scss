@@ -2,8 +2,8 @@
   // display: flex;
   position: absolute;
   top: 58px;
-  right: 50%;
-  width: 250px;
+  right: 35%;
+  width: 350px;
   transform: translateX(-91%, 1%);
   border-radius: 5px;
 
@@ -46,12 +46,12 @@
 }
 
 .menu-item {
-  height: 30px;
+  height: 40px;
   display: flex;
   align-items: center;
   border-radius: 10px;
   transition: background(500ms);
-  padding: 0.5rem;
+  padding: 0.7rem;
   color: #ddd;
   font-weight: 400;
   cursor: pointer;

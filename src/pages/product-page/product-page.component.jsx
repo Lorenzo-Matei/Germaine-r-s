@@ -49,6 +49,13 @@ const reducer = (state, action) => {
   }
 };
 
+function displayVoltage(voltage) {
+  if (voltage !== "") {
+    return " and " + voltage + "V";
+  } else {
+    return "";
+  }
+}
 function ProductPage() {
   const captionStyle = {
     fontSize: "2em",
@@ -139,18 +146,14 @@ function ProductPage() {
     " " +
     productData.modelVariant +
     " " +
-    productData.gasType;
+    productData.gasType +
+    displayVoltage(productData.voltage);
 
   const cloudFrontDistributionDomain =
     "https://dem6epkjrbcxz.cloudfront.net/test-products-images-nobg/";
   const productImage = productData.images;
-  const testImage = "1TR65DF.png";
   const data1 = [
     { image: cloudFrontDistributionDomain + productImage },
-
-    { image: "/assets/images/test-products-images-nobg/Vulcan-Vw3S.png" },
-
-    { image: cloudFrontDistributionDomain + testImage },
 
     // { image: cloudFrontDistributionDomain + testImage },
     // { image: cloudFrontDistributionDomain + testImage },
@@ -342,14 +345,14 @@ function ProductPage() {
           <h1 id="product-page-title">{productFullName}</h1>
 
           <div id="product-page-ratings-container">
-            <Rating
+            {/* <Rating
               id="product-page-rating-star"
               allowHalfIcon="true"
               showTooltip="true"
               readonly="true"
               emptyColor="#ddd"
               ratingValue={87}
-            />
+            /> */}
           </div>
           {productData.inStock === 0 ? (
             <Badge outline theme="danger" id="product-page-stock-indicator">
@@ -363,9 +366,9 @@ function ProductPage() {
 
           <h5 id="variant-title">Variant</h5>
           <FormSelect size="sm" id="product-page-formselect">
-            <option value="first">This is the first Variant</option>
-            <option value="second">This is the second Variant.</option>
-            <option value="third">This is the third variant.</option>
+            <option value="first">{productFullName}</option>
+            {/* <option value="second">This is the second Variant.</option>
+            <option value="third">This is the third variant.</option> */}
           </FormSelect>
 
           <div id="product-page-quantity-container">
@@ -390,7 +393,9 @@ function ProductPage() {
             $ {productData.price}
           </Badge> */}
 
-          <h3 id="product-page-price">$ {productData.onlinePrice[0]}</h3>
+          <h3 id="product-page-price">
+            $ {productData.onlinePrice[0].toFixed(2)}
+          </h3>
 
           <Button
             id="product-page-cart-btn"

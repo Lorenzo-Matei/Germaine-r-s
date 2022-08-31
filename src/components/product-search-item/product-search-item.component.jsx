@@ -178,14 +178,14 @@ function ProductSearchItem(props) {
           <Link to={`/products/${props.slug}`}>
             <p className="search-product-title">{props.name}</p>
 
-            <Rating
+            {/* <Rating
               m-auto
               style={{ margin: "0 10px" }}
               size={15}
               readonly="true"
               ratingValue={props.rating * 20}
               className="search-product-ratings"
-            />
+            /> */}
           </Link>
 
           <div className="cart-price-container">

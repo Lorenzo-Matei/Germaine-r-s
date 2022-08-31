@@ -1,82 +1,76 @@
 import React from "react";
 import { Carousel } from "react-carousel-minimal";
+import { Col, Row } from "shards-react";
 
 import "./contact.styles.scss";
 
+const cloudFrontDistributionMiscDomain =
+  "https://dem6epkjrbcxz.cloudfront.net/misc/";
+
 const ContactPage = () => {
-  const data = [
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
-      caption: `<div>
-                      San Francisco
-                      <br/>
-                      Next line
-                    </div>`,
-    },
-    {
-      image:
-        "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
-      caption: "Scotland",
-    },
-    {
-      image:
-        "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
-      caption: "Darjeeling",
-    },
-    {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
-      caption: "San Francisco",
-    },
-    {
-      image:
-        "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
-      caption: "Scotland",
-    },
-    {
-      image:
-        "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
-      caption: "Darjeeling",
-    },
-    {
-      image:
-        "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
-      caption: "San Francisco",
-    },
-    {
-      image:
-        "https://images.ctfassets.net/bth3mlrehms2/6Ypj2Qd3m3jQk6ygmpsNAM/61d2f8cb9f939beed918971b9bc59bcd/Scotland.jpg?w=750&h=422&fl=progressive&q=50&fm=jpg",
-      caption: "Scotland",
-    },
-    {
-      image:
-        "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
-      caption: "Darjeeling",
-    },
-  ];
-
-  const captionStyle = {
-    fontSize: "2em",
-    fontWeight: "bold",
-  };
-  const slideNumberStyle = {
-    fontSize: "20px",
-    fontWeight: "bold",
-  };
-
   return (
-    <div className="container">
-      <h1 className="text-center" style={{ paddingTop: "30%" }}>
-        Contact Page
-      </h1>
+    <div className="contact-page-container">
+      <img
+        className="contact-page-store-img"
+        src={cloudFrontDistributionMiscDomain + "GRSStore.JPG"}
+        alt={cloudFrontDistributionMiscDomain + "GRSStore.JPG"}
+      />
 
-      <div style={{ textAlign: "center" }}>
-        <h2>React Carousel Minimal</h2>
-        <p>
-          Easy to use, responsive and customizable carousel component for React
-          Projects.
-        </p>
+      <div className="contact-page-card">
+        <Row>
+          <Col className="contact-info-col">
+            <h1 id="contact-page-title"> Contact Us</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            {" "}
+            <hr id="contact-page-hr" />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={4}>
+            <h4 id="contact-page-subtitle"> Phone Number </h4>
+          </Col>
+          <Col>
+            <h4 id="contact-page-subtitle">(519) 966-0950</h4>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            {" "}
+            <hr id="contact-page-hr" />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={4}>
+            <h4 id="contact-page-subtitle"> Address </h4>
+          </Col>
+          <Col>
+            <h4 id="contact-page-subtitle">
+              1140 Crawford Ave Windsor, Ontario, Canada,{" "}
+            </h4>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            {" "}
+            <hr id="contact-page-hr" />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={4}>
+            <h4 id="contact-page-subtitle"> Email </h4>
+          </Col>
+          <Col>
+            <h4 id="contact-page-subtitle">sales@germainers.com</h4>
+          </Col>
+        </Row>
+
+        {/* <h1 id="contact-page-title"> Contact Us</h1>
+      </div>
+      <div className="contact-page">
+        <h3 id="contact-page-info"> Contact Us</h3> */}
       </div>
     </div>
   );
